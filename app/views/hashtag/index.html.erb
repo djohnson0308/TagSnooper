@@ -1,0 +1,19 @@
+<%= form_tag("/hashtags", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<% if defined?(@hashtags) %>
+  <div class="">
+    <%= @hashtags.each do |tag| %>
+    <%= tag.methods.sort %><br>
+    <strong><%= tag.full_text %></strong>
+    <% tag.hashtags.each do |hash| %>
+    <p>#<%= hash.text %></p>
+    <p><%= hash.methods.sort %></p>
+    <% end %>
+    <% end %>
+  </div>
+<% end %>

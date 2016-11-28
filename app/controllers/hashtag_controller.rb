@@ -3,7 +3,9 @@ require 'twitter_search'
 class HashtagController < ApplicationController
 
   def index
-    @results = Hashtag.tweet_search(params[:q])
+    unless params[:q].nil?
+      @results = Hashtag.tweet_search(params[:q])
+    end
   end
 
 end

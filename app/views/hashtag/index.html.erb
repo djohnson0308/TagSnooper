@@ -4,8 +4,12 @@
   <%= submit_tag("Snoop") %>
 <% end %>
 
-<% @results.each do |key, value| %>
-  <div class="">
-    #<%= key.capitalize %>: <%= value %>
-  </div>
+<% if defined?(@results) %>
+
+  <% @results.each do |key, value| %>
+    <div class="">
+      #<%= key.capitalize %>: <%= value %>
+    </div>
+  <% end %>
+
 <% end %>

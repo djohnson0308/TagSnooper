@@ -16,4 +16,5 @@ class Hashtag < ApplicationRecord
     hashtag_collection.sort_by{|key, value| value}.reverse
   end
 
+
 end

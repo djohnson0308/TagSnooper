@@ -4,26 +4,8 @@
   <%= submit_tag("Snoop") %>
 <% end %>
 
-
-<%# if @hashtags.blank? %>
-
-<% @results.each do |hashtag, count| %>
+<% @results.each do |key, value| %>
   <div class="">
-    #<%= hashtag %> : <%= count %>
+    #<%= key.capitalize %>: <%= value %>
   </div>
 <% end %>
-
-  <!-- <div class="">
-    <%# @hashtags.each do |tag| %>
-    <%# tag.methods.sort %><br>
-    <strong><%# tag.full_text %></strong>
-
-      <div class="hashtags">
-        <%# tag.hashtags.each do |hash| %>
-        <p><%# hash.text %></p>
-        <p><%# hash.methods.sort %></p>
-        <%# end %>
-      </div> -->
-
-    <%# end %>
-<%# end %>

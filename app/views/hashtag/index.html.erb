@@ -11,8 +11,11 @@
   <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
     <% @results.each do |user_hashtag, hashtag_count| %>
     <div class="hashtags">
-      <%= hidden_field(:hashtag, :value, value: hashtag_count, name: 'value', id: user_hashtag) %>
-      #<%= user_hashtag.capitalize %>: <%= hashtag_count %> <%= check_box_tag 'hashtag[hashtags][]', name: user_hashtag, value: hashtag_count %>
+
+      #<%= user_hashtag.capitalize %>: <%= hashtag_count %>
+      <%= hidden_field(:hashtag, :value, value: hashtag_count, name: user_hashtag, id: user_hashtag) %>
+      <!-- <%= check_box_tag(:hashtag, :name, name: user_hashtag + '[]') %> -->
+      <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]" >
     </div>
     <% end %>
     <input type="submit" value="Save Snoops">

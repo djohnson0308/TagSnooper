@@ -13,14 +13,15 @@ class HashtagController < ApplicationController
   end
 
   def batch_create
-    params[:hashtag][:hashtags].each do |hashtag|
-      Hashtag.create(hashtag)
+    params[:hashtag_values].each do |hashtag|
+      hashtag_count = params[hashtag].to_i
+      Hashtag.create!(name: hashtag, count: hashtag_count)
     end
   end
 
   private
   def hashtag_params
-    params.require(:hashtags).permit(:hashtags, :name, :count, :value)
+    params.require(:hashtags).permit(:hashtag_values, :name, :count)
   end
 
 end

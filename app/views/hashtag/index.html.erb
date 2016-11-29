@@ -1,15 +1,21 @@
-<%= form_tag("/hashtags", method: "get") do %>
+<div class="search-bar">
+  <%= form_tag("/hashtags", method: "get") do %>
   <%= label_tag(:q, "Snoop for:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Snoop") %>
-<% end %>
+  <% end %>
+</div>
 
 <% if defined?(@results) %>
 
-  <% @results.each do |key, value| %>
+  <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
+    <% @results.each do |user_hashtag, hashtag_count| %>
     <div class="hashtags">
-      #<%= key.capitalize %>: <%= value %>
+      <%= hidden_field(:hashtag, :value, value: hashtag_count, name: 'value', id: user_hashtag) %>
+      #<%= user_hashtag.capitalize %>: <%= hashtag_count %> <%= check_box_tag 'hashtag[hashtags][]', name: user_hashtag, value: hashtag_count %>
     </div>
+    <% end %>
+    <input type="submit" value="Save Snoops">
   <% end %>
 
 <% end %>

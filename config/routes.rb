@@ -8,7 +8,15 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+  # get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new'
-  post '/users' => 'users#create'
+  resources :users, except: [:new]
+  # post '/users' => 'users#create'
+
+  get '/dashboard' => 'dashboard#index'
+  get 'dashboard/settings' => 'dashboard#settings'
+  get 'dashboard/hashtags' => 'dashboard#hashtags'
+
+  get '/landing' => 'landing#index'
 end

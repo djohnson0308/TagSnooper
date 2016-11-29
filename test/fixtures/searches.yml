@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parent_hashtag: MyString
+  start_date: 2016-11-28
+  end_date: 2016-11-28
+  topic: one
+
+two:
+  parent_hashtag: MyString
+  start_date: 2016-11-28
+  end_date: 2016-11-28
+  topic: two

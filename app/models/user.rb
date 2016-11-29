@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :hashtags
+  has_many :topics
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true
   validates :password, presence: true

@@ -1,5 +1,5 @@
 class Hashtag < ApplicationRecord
-  belongs_to :search
+  belongs_to :topic
 
   def self.tweet_search(term)
     hashtag_collection = {}

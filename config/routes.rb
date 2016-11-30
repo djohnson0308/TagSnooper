@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   resources :users
+  resources :topics
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/hashtags', to: 'hashtag#index'
   post '/hashtags/create', to: 'hashtag#batch_create'

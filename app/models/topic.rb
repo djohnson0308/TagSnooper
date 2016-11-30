@@ -1,4 +1,4 @@
 class Topic < ApplicationRecord
   belongs_to :user
-  has_many :searches
+  has_many :hashtags
 end

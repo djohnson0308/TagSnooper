@@ -10,25 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129020800) do
+ActiveRecord::Schema.define(version: 20161129231257) do
 
   create_table "hashtags", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "name"
     t.integer  "count"
-    t.integer  "search_id"
-    t.index ["search_id"], name: "index_hashtags_on_search_id"
-  end
-
-  create_table "searches", force: :cascade do |t|
-    t.string   "parent_hashtag"
-    t.date     "start_date"
-    t.date     "end_date"
     t.integer  "topic_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["topic_id"], name: "index_searches_on_topic_id"
+    t.index ["topic_id"], name: "index_hashtags_on_topic_id"
   end
 
   create_table "topics", force: :cascade do |t|

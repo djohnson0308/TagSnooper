@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tagsnooper</title>
+<p class='topics'><%= current_user.topics.first.name %></p>
+  <% current_user.topics.each do |h| %>
+  <% h.hashtags.each do |ht, count| %>
+  <div>
+    <%= ht.name.capitalize %>
+  </div>
+  <% end %>
+<% end %>
 
-  </head>
-
-  <body>
-
-  </body>
-</html>
+  <!-- <p class='hashtags'><%# current_user.topics do %></p> -->

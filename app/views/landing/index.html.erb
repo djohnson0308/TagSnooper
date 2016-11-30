@@ -1,10 +1,130 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <title>Tagsnoop</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
-  <body>
-  
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">TAGSNOOPER</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">SIGN UP</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">HOW IT WORKS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Access to Twitter's Most Relevant Hashtags!</h1>
+                    <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
+                    <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
+                    <% if current_user %>
+                      Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+                    <% else %>
+                    <div class="login-button">  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </div>
+                    <% end %>
+                  <%= yield %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>How It Works</h1>
+                </div>
+                <div class="col-md-6">
+                <div>
+                  <ul>
+                    <li><img src="http://www.etchedcomm.com/wp-content/uploads/2014/08/hashtag-use.png"></img></li>
+                    <li><img src="http://www.niccolomatterazzo.com/wp-content/uploads/2015/07/Hashtags-are-you-sure-that-you-are-using-them-correctly.jpg"></li>
+                    <li><img src="https://socialchadder.files.wordpress.com/2013/11/social-media-for-small-businesses-how-to-harness-the-hashtag-infographic.png?w=220&h=126&crop=1"></img></li>
+                    <li><img src="http://www.bookmorebrides.com/wp-content/uploads/2014/08/money-hashtag-copy.png"></img></li>
+                  </ul>
+                </div>
+                <div class="">
+                  <li>Problem</li>
+                  <li>Solution</li>
+                  <li>Power of the #Hashtag</li>
+                  <li>Results</li>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Empty</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+
   </body>
 </html>

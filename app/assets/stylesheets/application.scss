@@ -48,11 +48,20 @@
 .navbar-brand {
   color: #1D2D44 !important;
   font-size: 2em;
+  padding-left: 5em;
+
+}
+
+.collapse .navbar-collapse .navbar-ex1-collapse {
+  float: right;
+}
+
+.nav .navbar-nav {
 }
 
 li a {
   color: #1D2D44 !important;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 ul {
@@ -68,16 +77,18 @@ img {
 }
 
 
-// h1 {
-//   color: white;
-// }
+h1 {
+  color: white;
+}
  .intro-section {
      height: 100%;
      padding-top: 150px;
      text-align: center;
      background: #fff;
-     background-image: url("");
-
+    //  background-image: url("https://s15.postimg.org/8zu2ogdgb/MRld_Sx.jpg");
+    // background-color: #c6e2e9;
+    background: -webkit-linear-gradient(#edf4ec,#c6e2e9,#c6e2e9);
+    background: linear-gradient(#edf4ec,#c6e2e9,#c6e2e9);
  }
 
  .about-section {

@@ -13,9 +13,10 @@ class HashtagController < ApplicationController
   end
 
   def batch_create
+    byebug
+    topic_id = params[:topic].to_i
     params[:hashtag_values].each do |hashtag|
-      hashtag_count = params[hashtag].to_i
-      Hashtag.create!(name: hashtag, count: hashtag_count)
+      Hashtag.create!(name: hashtag, count: params[hashtag].to_i, topic_id: topic_id)
     end
   end
 

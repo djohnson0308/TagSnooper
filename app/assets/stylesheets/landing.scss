@@ -38,13 +38,13 @@ of those sections to manage the look and feel of the site. */
 
 }
 
-.nav .navbar-nav {
-
+.nav.navbar-nav {
 
 }
 
-.navbar .navbar-default .navbar-fixed-top {
-
+.navbar.navbar-default.navbar-fixed-top {
+  height: 50px !important;
+padding: 0 !important;
 }
 
 li a {

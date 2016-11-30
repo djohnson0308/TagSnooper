@@ -27,16 +27,15 @@
      height: 100%;
  }
 
+
  @media(min-width:767px) {
      .navbar {
          padding: 20px 0;
          -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
          -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
          transition: background .5s ease-in-out,padding .5s ease-in-out;
-         background-color: #1D2D44;
+         background-color: white;
      }
-
-    
 
      .top-nav-collapse {
          padding: 0;
@@ -46,12 +45,39 @@
  /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
  The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
  of those sections to manage the look and feel of the site. */
+.navbar-brand {
+  color: #1D2D44 !important;
+  font-size: 2em;
+}
 
+li a {
+  color: #1D2D44 !important;
+  font-size: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 40%;
+}
+
+.login-button {
+  font-size: 2em;
+}
+
+
+// h1 {
+//   color: white;
+// }
  .intro-section {
      height: 100%;
      padding-top: 150px;
      text-align: center;
      background: #fff;
+     background-image: url("");
+
  }
 
  .about-section {
@@ -59,6 +85,11 @@
      padding-top: 150px;
      text-align: center;
      background: #eee;
+     background-color: #5899B9;
+ }
+
+ .steps
+ {
  }
 
  .services-section {
@@ -68,9 +99,11 @@
      background: #fff;
  }
 
+
  .contact-section {
      height: 100%;
      padding-top: 150px;
      text-align: center;
      background: #eee;
+     background-color: #EE6352;
  }

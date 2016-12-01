@@ -7,13 +7,16 @@
 
                 <h1>My Dashboard</h1>
                 <p class='topics'>
-                  <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
+                  <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), include_blank: true, id: "topic_search" %>
                 </p>
                   <% @topic.hashtags.each do |ht| %>
                   <div>
                     <%= ht.name.capitalize %>
                   </div>
                   <% end %>
+
+                  <%= render 'newtopic' %>
+
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">TAGSNOOPER</a>
+            <a class="navbar-brand page-scroll" href="#page-top"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,20 +18,21 @@
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">SIGN UP</a>
+                    <a class="page-scroll" href="#about"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">HOW IT WORKS</a>
+                    <a class="page-scroll" href="#services"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">ABOUT</a>
+                    <a class="page-scroll" href="#contact"></a>
                 </li>
             </ul>
+            <div class="sessionstat">
             <% if current_user %>
-              Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+              <strong>Welcome, <%= current_user.name %></strong> | <%= link_to "Logout", '/logout' %>
             <% else %>
             <div class="login-button">  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </div>
-            <% end %>
+            <% end %></div>
         </div>
         <!-- /.navbar-collapse -->
     </div>

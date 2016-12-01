@@ -47,7 +47,7 @@
                     <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
                     <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
                     <% if current_user %>
-                     Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+                     <strong> Welcome, <%= current_user.name %> </strong> | <%= link_to "Logout", '/logout' %>
                     <% else %>
                     <div class="login-button">  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </div>
                     <% end %>

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'font-awesome-sass'
 
 gem 'hirb'
 gem 'httparty'

@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'execjs'
+gem 'therubyracer', platforms: :ruby
 gem 'hirb'
 gem 'httparty'
 gem 'twitter'
@@ -22,6 +25,8 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 group :development do
@@ -32,5 +37,4 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'

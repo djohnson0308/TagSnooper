@@ -126,6 +126,10 @@ li img {
     background-color: #fff;
 }
 
+.about.col-lg-12 {
+  padding-bottom: 10em;
+}
+
 .about {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -146,7 +150,9 @@ li img {
 .circles.col-md-3 {
   float: left;
   list-style-type: none;
-  height:500px;
-  width:500px;
+}
 
+li img {
+  height: 200px;
+  width: 200px;
 }

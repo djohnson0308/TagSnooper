@@ -1,20 +1,9 @@
 <%= render 'navbar' %>
 
-<p class='topics'><%= current_user.topics.first.name %></p>
-  <% current_user.topics.each do |h| %>
-  <% h.hashtags.each do |ht, count| %>
-  <div>
-    <%= ht.name.capitalize %>
-  </div>
-  <% end %>
-<% end %>
-
-
 <section id="intro" class="intro-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-
 
                 <h1>My Dashboard</h1>
                 <p class='topics'><%= current_user.topics.first.name %></p>
@@ -25,7 +14,7 @@
                   </div>
                   <% end %>
                 <% end %>
-                
+
             </div>
         </div>
     </div>

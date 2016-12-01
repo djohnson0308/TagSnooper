@@ -15,6 +15,11 @@ class TopicsController < ApplicationController
     end
   end
 
+  def get_hashtags
+    params[:topicName]
+    redirect_to dashboard_path(topic_name: params[:topicName])
+  end
+
   private
   def topic_params
     params.require(:topic).permit(:name)

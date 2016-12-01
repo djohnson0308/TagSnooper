@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'execjs'
+gem 'therubyracer', platforms: :ruby
 gem 'hirb'
 gem 'httparty'
 gem 'twitter'
@@ -21,6 +23,8 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 group :development do

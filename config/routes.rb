@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get '/hashtags', to: 'hashtag#index'
   post '/hashtags/create', to: 'hashtag#batch_create'
 
-  root 'users#welcome'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
@@ -23,4 +22,6 @@ Rails.application.routes.draw do
   get 'dashboard/hashtags' => 'dashboard#hashtags'
 
   get '/landing' => 'landing#index'
+
+  get '/topic/hashtags' => 'topics#get_hashtags'
 end

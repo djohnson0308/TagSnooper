@@ -1,5 +1,5 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+
 
 body {
     width: 100%;
@@ -47,6 +47,11 @@ of those sections to manage the look and feel of the site. */
 padding: 0 !important;
 }
 
+.access {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
 li a {
  color: #1D2D44 !important;
  font-size: 1.25em;
@@ -62,12 +67,41 @@ li img {
 
 .login-button {
  font-size: 2em;
-}
-
-
-h1 {
  color: white;
 }
+
+.works {
+  padding-bottom: 8em;
+}
+
+.icons {
+  padding-bottom: 3em;
+}
+
+.how {
+ color: black;
+ font-family: 'Source Sans Pro', sans-serif;
+}
+
+ .desc {
+  list-style-type: none;
+  float: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+}
+
+.fa.fa-search {
+  font-size: 60px;
+}
+
+.fa.fa-list {
+  font-size: 60px;
+}
+
+.fa.fa-archive {
+  font-size: 60px;
+}
+
 #intro {
     height: 100%;
     padding-top: 150px;
@@ -89,6 +123,10 @@ h1 {
     background-color: #fff;
 }
 
+.about {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .steps
 {
 }
@@ -100,4 +138,12 @@ h1 {
     background: #2C3E50; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #2C3E50 , #4CA1AF); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #2C3E50 , #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.circles.col-md-3 {
+  float: left;
+  list-style-type: none;
+  height:500px;
+  width:500px;
+
 }

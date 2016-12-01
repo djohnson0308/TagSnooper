@@ -43,11 +43,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Access to Twitter's Most Relevant Hashtags!</h1>
+                    <h1 class="access">ACCESS TO TWITTER'S MOST RELEVANT HASHTAGS!</h1>
                     <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
                     <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
                     <% if current_user %>
-                      Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+                     Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
                     <% else %>
                     <div class="login-button">  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </div>
                     <% end %>
@@ -61,24 +61,25 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1>How It Works</h1>
+                <div class="works col-lg-12">
+                    <h1 class="how">HOW IT WORKS</h1>
                 </div>
-                <div class="col-md-6">
-                <div>
+                <div class="icons col-md-12">
                   <ul>
-                    <li><img src="http://www.etchedcomm.com/wp-content/uploads/2014/08/hashtag-use.png"></img></li>
-                    <li><img src="http://www.niccolomatterazzo.com/wp-content/uploads/2015/07/Hashtags-are-you-sure-that-you-are-using-them-correctly.jpg"></li>
-                    <li><img src="https://socialchadder.files.wordpress.com/2013/11/social-media-for-small-businesses-how-to-harness-the-hashtag-infographic.png?w=220&h=126&crop=1"></img></li>
-                    <li><img src="http://www.bookmorebrides.com/wp-content/uploads/2014/08/money-hashtag-copy.png"></img></li>
+                    <li class="col-md-4"><i class="fa fa-search" aria-hidden="true"></i></li>
+                    <li class="col-md-4"><i class="fa fa-list" aria-hidden="true"></i></li>
+                    <li class="col-md-4"><i class="fa fa-archive" aria-hidden="true"></i></li>
+                    <!-- <li class="col-md-4"><img src="http://www.etchedcomm.com/wp-content/uploads/2014/08/hashtag-use.png"></img></li>
+                    <li class="col-md-4"><img src="http://www.niccolomatterazzo.com/wp-content/uploads/2015/07/Hashtags-are-you-sure-that-you-are-using-them-correctly.jpg"></li>
+                    <li class="col-md-4"><img src="http://www.bookmorebrides.com/wp-content/uploads/2014/08/money-hashtag-copy.png"></img></li> -->
                   </ul>
                 </div>
-                <div class="">
-                  <li>Problem</li>
-                  <li>Solution</li>
-                  <li>Power of the #Hashtag</li>
-                  <li>Results</li>
-                </div>
+                <div class="col-md-12">
+                  <ul>
+                    <li class="desc col-md-4">Enter any #hashtag chosen by you</li>
+                    <li class="desc col-md-4">Get a list of the most relevant tags related to your specific audience</li>
+                    <li class="desc col-md-4">Save them and keep them organized by topics</li>
+                  </ul>
                 </div>
             </div>
         </div>
@@ -89,7 +90,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About</h1>
+                    <h1 class="about">ABOUT</h1>
+                </div>
+                <div class="col-md-12">
+                  <ul>
+                  <li class="circles col-md-3"><img src="https://s17.postimg.org/9ibbs8hwv/imageedit_2_8926941055.gif" alt="cr"></li>
+
+                  <li class="circles col-md-3"><img src="https://s18.postimg.org/zcq1a35fd/imageedit_1_6459561802.gif" alt="av"></li>
+
+                  <li class="circles col-md-3"><img src="https://s15.postimg.org/8otw5x70r/imageedit_2_5032938431.gif" alt="dj"></li>
+
+                  <li class="circles col-md-3"><img src="https://s17.postimg.org/bo4ao1o5r/imageedit_1_9746226061.gif" alt="dj"></li>
+                </ul>
                 </div>
             </div>
         </div>

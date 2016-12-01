@@ -1,18 +1,30 @@
 
-<h1>Login</h1>
+
 
 
 <%= render 'navbar' %>
 
-<h1>Login here</h1>
 
 
 
-<div> <%= form_tag '/login' do %>
+<section id="intro" class="intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="access">Login</h1>
+                <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
+                <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
+                <div>
+                <%= form_tag '/login' do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+                Email: <%= text_field_tag :email %>
+                Password: <%= password_field_tag :password %>
+                <%= submit_tag "Submit" %>
 
-<% end %>
-</div>
+              <% end %>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>

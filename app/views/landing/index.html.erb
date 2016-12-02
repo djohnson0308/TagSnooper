@@ -46,7 +46,8 @@
                     <% if current_user %>
                      <strong> Welcome, <%= current_user.name %> </strong> | <%= link_to "Logout", '/logout' %>
                     <% else %>
-                    <div class="login-button">  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </div>
+                    <%= link_to '<button type="button" class="button">Log In</button>'.html_safe, '/login' %>
+                    <%= link_to '<button type="button" class="button">Signup</button>'.html_safe, '/signup' %>
                     <% end %>
                   <%= yield %>
                 </div>

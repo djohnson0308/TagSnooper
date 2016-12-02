@@ -29,7 +29,7 @@
             </ul>
             <div class="sessionstat">
             <% if current_user %>
-              <strong>Welcome, <%= current_user.name %></strong> | <%= link_to "Logout", '/logout' %>
+              <strong>Welcome, <%= current_user.name %></strong> | <%= link_to "Search", '/hashtags' %> | <%= link_to "Logout", '/logout' %>
             <% else %>
             <div class="login-button">  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </div>
             <% end %></div>

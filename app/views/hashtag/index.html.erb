@@ -8,12 +8,17 @@
             <div class="col-lg-12">
               <div class="search-bar">
                 <%= form_tag("/hashtags", method: "get") do %>
-                <%= label_tag(:q, "Snoop for:") %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Snoop") %>
-                <% end %>
-
-
+                <%#= label_tag(:q, "Snoop for:") %>
+                <div class="stage">
+                  <div class="cell">
+                    <div class="searchbar">
+                      <%= text_field_tag(:q, '', class: 'btn-extended') %>
+                      <div class="btn-search"></div>
+                    </div>
+                  </div>
+                </div>
+                <%#= submit_tag("Snoop") %>
+              <% end %>
               <% if defined?(@results) %>
 
                 <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>

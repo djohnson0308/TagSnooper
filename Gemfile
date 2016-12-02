@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'
+gem 'compass'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'execjs'

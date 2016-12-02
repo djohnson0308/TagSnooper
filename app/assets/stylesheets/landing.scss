@@ -109,9 +109,9 @@ li img {
     // background: #fff;
    //  background-image: url("https://s15.postimg.org/8zu2ogdgb/MRld_Sx.jpg");
    // background-color: #c6e2e9;
-   background: #085078; /* fallback for old browsers */
-   background: -webkit-linear-gradient(to left, #085078 , #85D8CE);
-   background: linear-gradient(to left, #085078 , #85D8CE);
+   background: #4CA1AF; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
@@ -124,7 +124,7 @@ li img {
 }
 
 .about.col-lg-12 {
-  padding-bottom: 10em;
+  padding-bottom: em;
 }
 
 .about {

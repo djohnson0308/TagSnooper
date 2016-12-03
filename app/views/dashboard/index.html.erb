@@ -8,7 +8,11 @@
                 <h1>My Dashboard</h1>
                 <p class='topics'>
                   <% if @topic %>
-                    <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), include_blank: true, id: "topic_search" %>
+                  <!--[if !IE]> -->
+                  <div class="notIE">
+                    <span class="fancyArrow"></span>
+                    <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
+                  </div>
                   </p>
                     <% @topic.hashtags.each do |ht| %>
                     <div>

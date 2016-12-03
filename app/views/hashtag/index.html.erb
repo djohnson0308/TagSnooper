@@ -1,37 +1,37 @@
 <%= render 'navbar' %>
 
 <section id="intro" class="intro-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-              <div class="search-bar">
-                <%= form_tag("/hashtags", method: "get") do %>
-                <%= label_tag(:q, "Snoop for:") %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Snoop") %>
-                <% end %>
+  <div class="container">
+    <div class="col-lg-12">
 
 
-              <% if defined?(@results) %>
+      <div class="search-bar">
+        <%= form_tag("/", method: "get") do %>
+        <%# label_tag(:q, "Snoop for:") %>
+        <%= text_field_tag (:q), nil, placeholder: "Snoop for.." %>
+        <%# submit_tag("Snoop") %>
+        <% end %>
 
-                <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
-                <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name') %>
-                  <% @results.each do |user_hashtag, hashtag_count| %>
-                  <div class="hashtags">
 
-                    #<%= user_hashtag.capitalize %>: <%= hashtag_count %>
-                    <%= hidden_field(:hashtag, :value, value: hashtag_count, name: user_hashtag, id: user_hashtag) %>
-                    <%#= check_box_tag(:hashtag, :name, name: user_hashtag + '[]') %>
-                    <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]" >
-                  </div>
-                  <% end %>
-                  <input type="submit" value="Save Snoops">
-                <% end %>
+        <% if defined?(@results) %>
 
-              <% end %>
-              </div>
+        <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
+        <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name') %>
+        <% @results.each do |user_hashtag, hashtag_count| %>
+        <div class="hashtags">
 
-            </div>
+          #<%= user_hashtag.capitalize %>: <%= hashtag_count %>
+          <%= hidden_field(:hashtag, :value, value: hashtag_count, name: user_hashtag, id: user_hashtag) %>
+          <%#= check_box_tag(:hashtag, :name, name: user_hashtag + '[]') %>
+          <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]" >
         </div>
+        <% end %>
+        <input type="submit" value="Save Snoops">
+        <% end %>
+
+        <% end %>
+      </div>
+
     </div>
+  </div>
 </section>

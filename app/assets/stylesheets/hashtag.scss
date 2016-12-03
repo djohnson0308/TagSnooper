@@ -18,3 +18,30 @@
   background: -webkit-linear-gradient(to left, #085078 , #85D8CE);
   background: linear-gradient(to left, #085078 , #85D8CE);
 }
+
+#intro {
+  padding-top: 5em;
+}
+
+.intro-section {
+  padding-top: 5em;
+}
+
+input#q {
+    width: 160px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input#q:focus{
+    width: 100%;
+}

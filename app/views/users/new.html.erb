@@ -1,11 +1,31 @@
-<h1>Signup!</h1>
 
-<%= form_for :user, url: '/users' do |f| %>
+<%= render 'navbar' %>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
 
-<% end %>
+<!-- <section id="intro" class="intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="access">SIGN UP</h1>
+
+                <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> --> -->
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<div class="login">
+	<h1>Sign Up</h1>
+    <%= form_for :user, url: '/users' do |f| %>
+    	<%= f.text_field :name, placeholder: "Name" %>
+      <%= f.text_field :email, placeholder: "Email"%>
+			<%= f.password_field :password, placeholder: "Password" %>
+			<%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+      <%= f.submit "Submit", class: "btn btn-primary btn-block btn-large" %>
+    <% end %>
+</div>

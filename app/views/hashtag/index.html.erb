@@ -1,6 +1,7 @@
 <%= render 'navbar' %>
 
 <section id="intro" class="intro-section">
+
   <div class="container">
     <div class="col-lg-12">
 
@@ -24,6 +25,7 @@
           <%= hidden_field(:hashtag, :value, value: hashtag_count, name: user_hashtag, id: user_hashtag) %>
           <%#= check_box_tag(:hashtag, :name, name: user_hashtag + '[]') %>
           <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]" >
+
         </div>
         <% end %>
         <input type="submit" value="Save Snoops">

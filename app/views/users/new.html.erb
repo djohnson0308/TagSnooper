@@ -11,16 +11,6 @@
                 <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> --> -->
 
 
-                <!-- <div>
-                  <%= form_for :user, url: '/users' do |f| %>
-
-                    Name: <%= f.text_field :name %>
-                    Email: <%= f.text_field :email %>
-                    Password: <%= f.password_field :password %>
-                    Password Confirmation: <%= f.password_field :password_confirmation %>
-                    <%= f.submit "Submit" %>
-
-                  <% end %>
 
                 </div>
 
@@ -31,11 +21,11 @@
 
 <div class="login">
 	<h1>Sign Up</h1>
-    <form method="post">
-    	<input type="text" name="u" placeholder="Name" required="required"/>
-      <input type="text" name="u" placeholder="Email" required="required"/>
-        <input type="password" name="p" placeholder="Password" required="required" />
-        <input type="password" name="p" placeholder="Confirm Password" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
-    </form>
+    <%= form_for :user, url: '/users' do |f| %>
+    	<%= f.text_field :name, placeholder: "Name" %>
+      <%= f.text_field :email, placeholder: "Email"%>
+			<%= f.password_field :password, placeholder: "Password" %>
+			<%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+      <%= f.submit "Submit", class: "btn btn-primary btn-block btn-large" %>
+    <% end %>
 </div>

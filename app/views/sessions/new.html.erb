@@ -26,9 +26,9 @@
 
 <div class="login">
 	<h1>Log In</h1>
-    <form method="post">
-    	<input type="text" name="u" placeholder="Email" required="required"/></input>
-        <input type="password" name="p" placeholder="Password" required="required"/>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
-    </form>
+    	<%= form_tag '/login' do %>
+    	<%= text_field_tag :email,"", placeholder: "Email" %>
+      <%= password_field_tag :password, "", placeholder: "Password" %>
+      <%= submit_tag "Submit", class: "btn btn-primary btn-block btn-large" %>
+    <% end %>
 </div>

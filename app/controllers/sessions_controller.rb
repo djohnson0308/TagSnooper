@@ -20,7 +20,7 @@ end
 
 def destroy
   session[:user_id] = nil
-  redirect_to '/login'
+  redirect_to '/'
 end
 
 end

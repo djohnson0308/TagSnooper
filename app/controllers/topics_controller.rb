@@ -7,7 +7,7 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(topic_params)
-    @topic.user_id = current_user.id
+    @topic.user_id = current_user[0].id
     if @topic.save
       redirect_to dashboard_path
     else

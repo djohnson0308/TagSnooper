@@ -51,15 +51,15 @@
                     <% end %>
                   <%= yield %>
                 </div>
+
+
                 <div class="search-bar">
                   <%= form_tag("/", method: "get") do %>
                   <%# label_tag(:q, "Snoop for:") %>
                   <%= text_field_tag (:q), nil, placeholder: "Snoop for.." %>
                   <%# submit_tag("Snoop") %>
                   <% end %>
-
-
-                <% if defined?(@results) %>
+                  <% if defined?(@results) %>
                     <% @results.each do |user_hashtag, hashtag_count| %>
                     <div class="hashtags">
                       #<%= user_hashtag.capitalize %>: <%= hashtag_count %>

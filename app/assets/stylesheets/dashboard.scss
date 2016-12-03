@@ -23,3 +23,10 @@ input#q {
 input#q:focus{
     width: 100%;
 }
+
+.card.card-block {
+  border:1px solid white;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 5em;
+}

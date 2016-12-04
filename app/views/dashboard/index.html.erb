@@ -1,11 +1,11 @@
 <%= render 'navbar' %>
 
-<section id="intro">
+<section id="dashintro">
     <div class="container">
 
       <div class="dashboard col-lg-12">
         <div class="dashboardnav">
-          <h1 class="dashboardtitle"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img>Dashboard</h1>
+          <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>Dashboard</h1>
         </div>
           <div class="col-md-6">
             <ul>
@@ -14,6 +14,12 @@
                 <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
                 <% end %>
               </li> -->
+              <li class="card card-block" style="width: 18rem; height:18rem">
+                <h3 class="card-title">Search Hashtags</h3>
+                <p class="card-text">Search specific topics for hashtags</p>
+                <a href="/hashtags"><button type="button" class="btn btn-primary">Search</button></a>
+              </li>
+
               <li class="card card-block" style="width: 18rem; height:18rem">
                 <h3 class="card-title">New Topic</h3>
                 <p class="card-text">Create a topic for each search you would like to save</p>

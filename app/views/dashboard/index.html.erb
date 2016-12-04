@@ -1,56 +1,57 @@
 <%= render 'navbar' %>
 
 <section id="dashintro">
-    <div class="container">
+   <div class="container">
 
-      <div class="dashboard col-lg-12">
-        <div class="dashboardnav">
-          <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>Dashboard</h1>
-        </div>
-          <div class="col-md-6">
-            <ul>
-              <!-- <li class="dropdown">
-                <% if @topic %>
-                <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
-                <% end %>
-              </li> -->
-              <li class="card card-block" style="width: 18rem; height:18rem">
-                <h3 class="card-title">Search Hashtags</h3>
-                <p class="card-text">Search specific topics for hashtags</p>
-                <a href="/hashtags"><button type="button" class="btn btn-primary">Search</button></a>
-              </li>
+     <div class="dashboard col-lg-12">
+       <div class="dashboardnav">
+         <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>Dashboard</h1>
+       </div>
+         <div class="col-md-6">
+           <ul>
+             <!-- <li class="dropdown">
+               <% if @topic %>
+               <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
+               <% end %>
+             </li> -->
+             <li class="card card-block" style="width: 18rem; height:18rem">
+               <h3 class="card-title">Search Hashtags</h3>
+               <p class="card-text">Search specific topics for hashtags</p>
+               <a href="/hashtags"><button type="button" class="btn btn-primary">Search</button></a>
+             </li>
 
-              <li class="card card-block" style="width: 18rem; height:18rem">
-                <h3 class="card-title">New Topic</h3>
-                <p class="card-text">Create a topic for each search you would like to save</p>
-            <%= render 'newtopic' %>
-              </li>
+             <li class="card card-block" style="width: 18rem; height:18rem">
+               <h3 class="card-title">New Topic</h3>
+               <p class="card-text">Create a topic for each search you would like to save</p>
+           <%= render 'newtopic' %>
+             </li>
 
-              <li class="card card-block" style="width: 18rem; height:16rem">
-              <h3 class="card-title">Delete Topic</h3>
-              <p class="card-text">Delete any topic you do not want anymore</p>
-              <%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger" %>
-              </li>
-        </div>
+             <li class="card card-block" style="width: 18rem; height:16rem">
+             <h3 class="card-title">Delete Topic</h3>
+             <p class="card-text">Delete any topic you do not want anymore</p>
+             <%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger" %>
+             </li>
+       </div>
 
-        <div class="col-md-6">
-          <ul>
-            <li class="dropdown">
-              <h3>Your Topics</h3>
-                <% if @topic %>
-                <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
-                <% end %>
-                <% if @topic %>
-                </p>
-                <% @topic.hashtags.each do |ht| %>
-                <div>
-                #<%= ht.name.capitalize %>
-                </div>
-              <% end %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
+       <div class="col-md-6">
+         <ul>
+           <li class="dropdown">
+             <h3>Your Topics</h3>
+               <% if @topic %>
+               <div class="dropdown-content">
+               <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
+               <% end %>
+             </div>
+               <% if @topic %>
+               <% @topic.hashtags.each do |ht| %>
+               <div class="dropdownitem">
+               <span style="color: #5899B9">#</span><%= ht.name.capitalize %>
+               </div>
+             <% end %>
+           <% end %>
+         </li>
+       </ul>
+     </div>
 
 
 </section>

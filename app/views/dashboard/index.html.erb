@@ -1,53 +1,69 @@
 <%= render 'navbar' %>
 
-<section id="intro">
+<section id="intro" class="intro-section">
     <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
 
-      <div class="dashboard col-lg-12">
-        <div class="dashboardnav">
-          <h1 class="dashboardtitle"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img>Dashboard</h1>
-        </div>
-          <div class="col-md-6">
-            <ul>
-              <!-- <li class="dropdown">
-                <% if @topic %>
-                <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
-                <% end %>
-              </li> -->
-              <li class="card card-block" style="width: 18rem; height:18rem">
-                <h3 class="card-title">New Topic</h3>
-                <p class="card-text">Create a topic for each search you would like to save</p>
-            <%= render 'newtopic' %>
-              </li>
+                <h1>My Dashboard</h1>
 
-              <li class="card card-block" style="width: 18rem; height:16rem">
-              <h3 class="card-title">Delete Topic</h3>
-              <p class="card-text">Delete any topic you do not want anymore</p>
-              <%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger" %>
-              </li>
-        </div>
 
-        <div class="col-md-6">
-          <ul>
-            <li class="dropdown">
-              <h3>Your Topics</h3>
-                <% if @topic %>
-                <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
-                <% end %>
-                <% if @topic %>
-                </p>
-                <% @topic.hashtags.each do |ht| %>
-                <div>
-                #<%= ht.name.capitalize %>
+                <div class="dropdown">
+                  <% if @topic %>
+                  <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>
+                  <% end %>
                 </div>
-              <% end %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
+                <div class="card card-block" style="width: 18rem; height:18rem">
+                  <h3 class="card-title">New Topic</h3>
+                  <p class="card-text">Create a topic for each search you would like to save</p>
+
+                  <% if @topic %>
+                  <ul>
+                  <% @topic.hashtags.each do |ht| %>
+                    <li>
+                      #<%= ht.name.capitalize %>
+                    </li>
+                  <% end %>
+                </ul>
+                <% end %>
+
+                <div class="card card-block" style="width: 18rem; height:18rem">
+                  <h3 class="card-title">New Topic</h3>
+                  <p class="card-text">Create a topic for each search you would like to save</p>
+                  <%= render 'newtopic' %>
+                </div>
 
 
+
+                <div class="card card-block" style="width: 18rem; height:16rem">
+                  <h3 class="card-title">Delete Topic</h3>
+                  <p class="card-text">Delete any topic you do not want anymore</p>
+                  <%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger" %>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- <p class='topics'>
+                  <#% if @topic %>
+                    <#%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), include_blank: true, id: "topic_search" %>
+                  </p>
+                    <#% @topic.hashtags.each do |ht| %>
+                    <div>
+                      <#%= ht.name.capitalize %>
+                    </div>
+                    <#% end %>
+                  <#% end %>
+
+                  <#%= render 'newtopic' %>
+            </div>
+            <#%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger" %>
+        </div>
+    </div> -->
 </section>
-
 
 <%= render 'footer' %>

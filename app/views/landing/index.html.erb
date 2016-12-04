@@ -56,16 +56,25 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="access">ACCESS TO TWITTER'S MOST RELEVANT HASHTAGS!</h1>
-                    <h3 class="access">Create an Account to Save Hashtags, Create Topics, and More.</h3>
-                    <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
-                    <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
-                    <% if current_user %>
-                     <strong> Welcome Back, <%= current_user.name %> </strong> | <%= link_to "Logout", '/logout' %>
-                    <% else %>
-                    <%= link_to '<button type="button" class="button">Log In</button>'.html_safe, '/login' %>
-                    <%= link_to '<button type="button" class="button">Signup</button>'.html_safe, '/signup' %>
-                    <% end %>
-                  <%= yield %>
+                      <div class="access col-md-5 box">
+                      <li>
+                      <h3 class="access">Welcome Back! Lets Start Snooping!</h3>
+                      <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
+                      <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
+                      <% if current_user %>
+                       <strong> Welcome Back, <%= current_user.name %> </strong> | <%= link_to "Logout", '/logout' %>
+                      <% else %>
+                      <%= link_to '<button type="button" class="button">Log In</button>'.html_safe, '/login' %>
+                    </li>
+                    </div>
+                    <div class="access col-md-5 box">
+                      <li>
+                      <h3 class="access">Create an Account to Save Hashtags, Create Topics, and More.</h3>
+                      <%= link_to '<button type="button" class="button">Signup</button>'.html_safe, '/signup' %>
+                      <% end %>
+                      <%= yield %>
+                      </li>
+                    </div>
                 </div>
             </div>
 

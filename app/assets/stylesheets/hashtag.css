@@ -1,0 +1,27 @@
+.hashtags {
+  text-align: center;
+  color: black;
+}
+
+.search-bar {
+  text-align: center;
+}
+
+.input#q {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input#q:focus {
+    width: 80%;
+}
+
+form.navbar-form.navbar-left.search-form {
+    float: none !important;
+}
+
+#submit_button {
+  width: 15rem;
+}

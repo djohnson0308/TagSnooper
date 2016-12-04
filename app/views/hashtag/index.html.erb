@@ -5,36 +5,10 @@
 
       <div class="dashboard col-lg-12">
         <div class="dashboardnav">
-          <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>Dashboard</h1>
+          <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>dashboard</h1>
         </div>
-          <div class="col-md-12">
-            <ul>
-              <!-- <li>
-                <div class="main">
-                  <div class="s1">
-                    <div class="s b sb1"></div>
-                    <div class="s b sb2"></div>
-                    <div class="s b sb3"></div>
-                    <div class="s b sb4"></div>
-                  </div>
+        <div>
 
-
-                  <div class="s2">
-                    <div class="s b sb5"></div>
-                    <div class="s b sb6"></div>
-                    <div class="s b sb7"></div>
-                    <div class="s b sb8"></div>
-                  </div>
-
-                  <div class="bigcon">
-                    <div class="big b"></div>
-                  </div>
-                </div>
-              </li> -->
-
-
-
-              <li class="search-bar">
                 <!-- <div class="search-bar" -->
                   <%= form_tag("/hashtags", method: "get") do %>
                   <%# label_tag(:q, "Snoop for:") %>
@@ -51,21 +25,19 @@
                   <div class="hashtags">
 
                     #<%= user_hashtag.capitalize %>: <%= hashtag_count %>
-                    <%# hidden_field(:hashtag, :value, value: hashtag_count, name: user_hashtag, id: user_hashtag) %>
-                    <%#= check_box_tag(:hashtag, :name, name: user_hashtag + '[]') %>
                     <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]" >
                   </div>
                   <% end %>
-                  <input type="submit" value="Save Snoops"><a href="/dashboard"></input>
+                  <input id="submit_button" type="submit" value="Save Snoops"><a href="/dashboard"></input>
                   <% end %>
 
                   <% end %>
             </li>
           </ul>
+        </div>
 
         </div>
 
 </section>
-
 
 <%= render 'footer' %>

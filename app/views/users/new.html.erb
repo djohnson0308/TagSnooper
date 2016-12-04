@@ -22,7 +22,7 @@
 <div class="login">
 	<h1>Sign Up</h1>
     <%= form_for :user, url: '/users' do |f| %>
-    	<%= f.text_field :name, placeholder: "Name" %>
+    	<%= f.text_field :name, placeholder: "Name", :autofocus=>true %>
       <%= f.text_field :email, placeholder: "Email"%>
 			<%= f.password_field :password, placeholder: "Password" %>
 			<%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>

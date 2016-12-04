@@ -29,9 +29,21 @@
                         <a class="page-scroll" href="#services">ABOUT</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/dashboard">MY DASHBOARD</a>
+                        <% if current_user %>
+                        <%= link_to "MY DASHBOARD", '/dashboard' %>
+                        <% else %>
+                        <%= link_to "MY DASHBOARD", '/login' %>
+                        <% end %>
+                        <% yield %></a>
                     </li>
-                </ul>
+                  </ul>
+                  <div class="sessionstat">
+                      <% if current_user %>
+                      <%= link_to "Logout", '/logout' %>
+                      <% else %>
+                      <div class="login-button">  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %> </div>
+                      <% end %></div>
+                  </div>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -39,7 +51,7 @@
     </nav>
 
     <!-- Intro Section -->
-    <section id="intro" class="intro-section">
+    <section id="landingintro" class="intro-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -48,7 +60,7 @@
                     <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
                     <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
                     <% if current_user %>
-                     <strong> Welcome, <%= current_user.name %> </strong> | <%= link_to "Logout", '/logout' %>
+                     <strong> Welcome Back, <%= current_user.name %> </strong> | <%= link_to "Logout", '/logout' %>
                     <% else %>
                     <%= link_to '<button type="button" class="button">Log In</button>'.html_safe, '/login' %>
                     <%= link_to '<button type="button" class="button">Signup</button>'.html_safe, '/signup' %>
@@ -57,20 +69,18 @@
                 </div>
             </div>
 
-            <div class="search-bar">
-              <%= form_tag("/", method: "get") do %>
-              <%# label_tag(:q, "Snoop for:") %>
-              <%= text_field_tag (:q), nil, placeholder: "Snoop for.." %>
-              <%# submit_tag("Snoop") %>
-              <% end %>
-              <% if defined?(@results) %>
-                <% @results.each do |user_hashtag, hashtag_count| %>
+            <!-- <div class="search-bar">
+              <%#= form_tag("/", method: "get") do %>
+              <%#= text_field_tag (:q), nil, placeholder: "Snoop for.." %>
+              <%# end %>
+              <%# if defined?(@results) %>
+                <%# @results.each do |user_hashtag, hashtag_count| %>
                 <div class="hashtags">
-                  #<%= user_hashtag.capitalize %>: <%= hashtag_count %>
-                <% end %>
-            <% end %>
+                  <%#= user_hashtag.capitalize %>: <%#= hashtag_count %>
+                <%# end %>
+            <%# end %>
             </div>
-            </div>
+            </div> -->
     </section>
 
     <!-- About Section -->
@@ -106,7 +116,7 @@
         <div class="container">
             <div class="row">
                 <div class="about col-lg-12">
-                    <h1 class="about">ABOUT</h1>
+                    <h1 class="about">MEET THE TEAM</h1>
                 </div>
                 <div class="col-md-12">
                   <ul>

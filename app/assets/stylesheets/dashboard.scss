@@ -6,9 +6,11 @@
 }
 
 .dropdown {
-  background:rgba(255,255,255,0.5);
+  font-size: 18px;
+  // background:rgba(255,255,255,0.5);
   border-radius: 10px;
-  float: right;
+  border: 1px solid white;
+  background-color: white;
 }
 
 input#q {
@@ -25,30 +27,46 @@ input#q {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
-
-input#q:focus{
-    width: 100%;
-}
-
+//
+// // input#q:focus{
+// //     width: 100%;
+// // }
+// //
 .card.card-block {
   border:1px solid white;
   border-radius: 10px;
   background-color: white;
   margin-bottom: 5em;
-  background:rgba(255,255,255,0.5);
+  // background:rgba(255,255,255,0.5);
+}
+//
+// select#topic_search {
+//     margin: 50px;
+//     border: 1px solid #111;
+//     background: transparent;
+//     width: 160px;
+//     padding: 5px 35px 5px 5px;
+//     font-size: 16px;
+//     /* border: 1px solid #ccc; */
+//     height: 34px;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+//     background: url('https://cdn0.iconfinder.com/data/icons/fast-forward/64/up-down-512.png') 96% / 15% no-repeat #fff;
+// }
+
+ul {
+  list-style-type: none;
+  display: inline;
 }
 
-select#topic_search {
-    margin: 50px;
-    border: 1px solid #111;
-    background: transparent;
-    width: 160px;
-    padding: 5px 35px 5px 5px;
-    font-size: 16px;
-    /* border: 1px solid #ccc; */
-    height: 34px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url('https://cdn0.iconfinder.com/data/icons/fast-forward/64/up-down-512.png') 96% / 15% no-repeat #fff;
+.dashboard.col-lg-12 {
+  border: solid white;
+  border-radius: 10px;
+  background:rgba(255,255,255,0.5);
+
+}
+
+.dashboardtitle {
+  color: black;
 }

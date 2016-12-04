@@ -12,19 +12,19 @@ html {
 }
 
 
-@media(min-width:767px) {
-    .navbar {
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-        background-color: white;
-    }
-
-    .top-nav-collapse {
-        padding: 0;
-    }
-}
+// @media(min-width:767px) {
+//     .navbar {
+//         padding: 20px 0;
+//         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+//         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+//         transition: background .5s ease-in-out,padding .5s ease-in-out;
+//         background-color: white;
+//     }
+//
+//     .top-nav-collapse {
+//         padding: 0;
+//     }
+// }
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
@@ -32,14 +32,6 @@ of those sections to manage the look and feel of the site. */
 .navbar-brand {
   padding-top:0px !important;
   padding-bottom:0px !important;
-}
-
-.collapse .navbar-collapse .navbar-ex1-collapse {
-
-}
-
-.nav.navbar-nav {
-
 }
 
 .navbar.navbar-default.navbar-fixed-top {
@@ -52,29 +44,29 @@ padding: 0 !important;
   color: white;
 }
 
-li a {
- color: #1D2D44 !important;
- font-size: 1.25em;
-}
+// li a {
+//  color: #1D2D44 !important;
+//  font-size: 1.25em;
+// }
 
-ul {
- list-style-type: none;
-}
-
-li img {
- width: 40%;
-}
-
-.login-button {
- font-size: 2em;
- color: white;
-}
-
-input[type="button"] {
-    width: 120px;
-    margin-left: 35px;
-    display: block;
-}
+// ul {
+//  list-style-type: none;
+// }
+//
+// li img {
+//  width: 40%;
+// }
+//
+// .login-button {
+//  font-size: 2em;
+//  color: white;
+// }
+//
+// input[type="button"] {
+//     width: 120px;
+//     margin-left: 35px;
+//     display: block;
+// }
 
 
 
@@ -119,6 +111,18 @@ input[type="button"] {
 }
 
 #intro {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    // background: #fff;
+   //  background-image: url("https://s15.postimg.org/8zu2ogdgb/MRld_Sx.jpg");
+   // background-color: #c6e2e9;
+   background: #4CA1AF; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#landingintro {
     height: 100%;
     padding-top: 150px;
     text-align: center;
@@ -129,6 +133,7 @@ input[type="button"] {
    background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
    background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 
 #about {
@@ -171,7 +176,7 @@ li img {
 }
 
 
-
+// -------- Login & Signup Button ONLY --------//
 
 @import  url(https://fonts.googleapis.com/css?family=Montserrat);
 

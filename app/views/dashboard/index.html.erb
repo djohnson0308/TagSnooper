@@ -39,12 +39,9 @@
                <% end %>
              </div>
                <% if @topic %>
-        
-
                <% @topic.hashtags.each do |ht| %>
                <div class="dropdownitem">
                <span style="color: #5899B9">#</span><%= ht.name.capitalize %>
-
                </div>
              <% end %>
            <% end %>

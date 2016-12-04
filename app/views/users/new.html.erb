@@ -20,12 +20,12 @@
 </section> -->
 
 <div class="login">
-	<h1>Sign Up</h1>
+	<h1>SIGN UP</h1>
     <%= form_for :user, url: '/users' do |f| %>
     	<%= f.text_field :name, placeholder: "Name", :autofocus=>true %>
       <%= f.text_field :email, placeholder: "Email"%>
 			<%= f.password_field :password, placeholder: "Password" %>
 			<%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
-      <%= f.submit "Submit", class: "btn btn-primary btn-block btn-large" %>
+      <%= f.submit "SUBMIT", class: "btn btn-primary btn-block btn-large" %>
     <% end %>
 </div>

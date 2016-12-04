@@ -41,7 +41,7 @@ padding: 0 !important;
 
 .access {
   font-family: 'Source Sans Pro', sans-serif;
-  color: black;
+  color: white;
   // font-family:'Open Sans',Arial,Helvetica Neue,sans-serif;
   // width: 100%;
   // font-size: 25px;
@@ -50,6 +50,10 @@ padding: 0 !important;
   // letter-spacing: 3px;
   font-weight: lighter;
 
+}
+
+h3.access {
+  color: black;
 }
 
 .access.col-md-5 {
@@ -292,6 +296,8 @@ footer {
 //   height: 100%;
 // }
 
+
+// -----------Intro Section: Background Transparent Color --------//
 .intro-section.bg-img {
   width: 100%;
   height: 100%;
@@ -306,6 +312,6 @@ footer {
 	bottom: 0;
 	left: 0;
 	background-image: linear-gradient(to bottom right,#4CA1AF,#4CA1AF);
-	opacity: .6;
+	opacity: .7;
   }
 }

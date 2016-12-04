@@ -39,7 +39,7 @@
                   </ul>
                   <div class="sessionstat">
                       <% if current_user %>
-                      <%= link_to "Logout", '/logout' %>
+                      <%= link_to "LOGOUT", '/logout' %>
                       <% else %>
                       <div class="login-button">  <%= link_to 'LOGIN', '/login' %> | <%= link_to 'SIGNUP', '/signup' %> </div>
                       <% end %></div>
@@ -63,15 +63,15 @@
                       <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
                       <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
                       <% if current_user %>
-                       <strong> Welcome Back, <%= current_user.name %> </strong> | <%= link_to "Logout", '/logout' %>
+                       <strong> Welcome Back, <%= current_user.name %> </strong> | <%= link_to "LOGOUT", '/logout' %>
                       <% else %>
-                      <%= link_to '<button type="button" class="button">Log In</button>'.html_safe, '/login' %>
+                      <%= link_to '<button type="button" class="button">LOGIN</button>'.html_safe, '/login' %>
                     </li>
                     </div>
                     <div class="access col-md-5 box">
                       <li>
                       <h3 class="access">Create an Account to Save Hashtags, Create Topics, and More.</h3>
-                      <%= link_to '<button type="button" class="button">Signup</button>'.html_safe, '/signup' %>
+                      <%= link_to '<button type="button" class="button">SIGNUP</button>'.html_safe, '/signup' %>
                       <% end %>
                       <%= yield %>
                       </li>
@@ -150,16 +150,16 @@
       <div class='container'>
         <div class='row'>
           <div class='col-md-3 col-sm-4 col-xs-6'>
-            <h4>Who We Are</h4>
+            <h4>WHO WE ARE</h4>
             <p><i>TagSnooper</i> is the best way to search for the most relevant hashtags according to any specific topic.</p>
           </div>
 
           <div class='col-md-offset-1 col-sm-2 col-xs-6'>
-            <h4>Links</h4>
+            <h4>LINKS</h4>
             <ul class='list-unstyled'>
-              <li><a href='/'>Home</a></li>
-              <li><a href='stations.html'>About</a></li>
-              <li><a href='stations.html'>Contact</a></li>
+              <li><a href='/'>HOME</a></li>
+              <li><a href='stations.html'>ABOUT</a></li>
+              <li><a href='stations.html'>CONTACT</a></li>
 
             </ul>
           </div>
@@ -167,21 +167,20 @@
           <div class='clearfix visible-xs'></div>
 
           <div class='col-sm-2 col-xs-6'>
-            <h4>Stay in Touch</h4>
+            <h4>STAY IN TOUCH</h4>
             <ul class='list-unstyled'>
-              <li><a href='about.html'>About</a></li>
-              <li><a href='/blog'>Blog</a></li>
-              <li><a href='http://twitter.com/'>Twitter</a></li>
-              <li><a href='http://facebook.com/'>Facebook</a></li>
+              <li><a href='/blog'>BLOG</a></li>
+              <li><a href='http://twitter.com/'>TWITTER</a></li>
+              <li><a href='http://facebook.com/'>FACEBOOK</a></li>
             </ul>
           </div>
 
           <div class='col-md-3 col-md-offset-1 col-sm-4 col-xs-6'>
-            <h4>Contact Us</h4>
+            <h4>CONTACT</h4>
             <ul class='list-unstyled'>
               <li><i class='glyphicon glyphicon-globe'></i> Miami, FL</li>
               <li><i class='glyphicon glyphicon-phone'></i> 1800-55-SNOOP</li>
-              <li><i class='glyphicon glyphicon-envelope'></i> <a href=''>contact@TagSnooper.com</a></li>
+              <li><i class='glyphicon glyphicon-envelope'></i> <a href=''>CONTACT@TAGSNOOPER.com</a></li>
             </ul>
             <p>TagSnooper&copy;2016.</p>
           </div>

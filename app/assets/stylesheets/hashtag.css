@@ -7,14 +7,14 @@
   text-align: center;
 }
 
-.input#q {
+input#hashtag_search {
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
 
 /* When the input field gets focus, change its width to 100% */
-input#q:focus {
+input#hashtag_search:focus {
     width: 80%;
 }
 
@@ -28,4 +28,12 @@ form.navbar-form.navbar-left.search-form {
 
 .dashboard.col-lg-12 {
     padding-bottom: 2em;
+}
+
+input#hashtag_search {
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 1px 4px 4px #888888;
+    color: black;
 }

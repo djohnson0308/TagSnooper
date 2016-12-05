@@ -5,9 +5,9 @@
 
      <div class="dashboard col-lg-12">
        <div class="dashboardnav">
-         <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>Dashboard</h1>
+         <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>DASHBOARD</h1>
        </div>
-         <div class="col-md-6">
+         <div class="col-md-3">
            <ul>
 
              <li class="card card-block" style="width: 18rem; height:18rem">
@@ -25,11 +25,11 @@
              <li class="card card-block" style="width: 18rem; height:16rem">
              <h3 class="card-title">Delete Topic</h3>
              <p class="card-text">Delete any topic you do not want anymore</p>
-             <%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger" %>
+             <%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this topic?"} %>
              </li>
        </div>
 
-       <div class="col-md-6">
+       <div class="col-md-9">
          <ul>
            <li class="dropdown">
              <h3>Your Topics</h3>

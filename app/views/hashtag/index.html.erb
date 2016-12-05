@@ -1,13 +1,12 @@
 <%= render 'navbar' %>
 
-<section id="dashintro">
+<section id="hashintro">
   <div class="container">
-
     <div class="dashboard col-lg-12">
       <div class="dashboardnav">
-        <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>Search</h1>
+        <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>SEARCH</h1>
       </div>
-      <div>
+      <div class="col-md-12">
 
         <%= form_tag("/hashtags", method: "get") do %>
         <%# label_tag(:q, "Snoop for:") %>
@@ -21,9 +20,10 @@
         <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
           <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name') %>
             <% @results.each do |user_hashtag, hashtag_count| %>
-            <div class="hashtags">
-              #<%= user_hashtag.capitalize %>: <%= hashtag_count %>
-              <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]" >
+            <div class="hashtags col-lg-12">
+              <div class="dropdownitem"><span style="color: #5899B9">#</span><%= user_hashtag.capitalize %>: <%= hashtag_count %>
+                <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]">
+              </div>
             </div>
             <% end %>
             <input class="btn btn-success submit_button" type="submit" value="Save Snoops"><a href="/dashboard"></a></input>
@@ -37,4 +37,4 @@
 
     </section>
 
-<%# render 'footer' %>
+<%= render 'footer' %>

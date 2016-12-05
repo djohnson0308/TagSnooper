@@ -29,3 +29,11 @@ form.navbar-form.navbar-left.search-form {
 .dashboard.col-lg-12 {
     padding-bottom: 2em;
 }
+
+
+input#hashtag_search {
+  width: 50%;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+}

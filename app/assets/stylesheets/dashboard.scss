@@ -92,8 +92,20 @@
   // border: 1px solid white;
   // background-color: white;
   background-color: rgba(255, 255, 255, 0.80);
-  border-style: outset;
+  border: solid lightgrey 1px;
 }
+
+.dropdown:hover {
+  // width: 90%;
+ /* This is 52px total. 1/2 of that is for top and the other half is for bottom. */
+ // height: 90%;
+ /* Below we are not using -26px for margin-top because .box has 6px border and 10px margin. */
+ /* That 16px is then divide by 2 since it's for both top and bottom, or 8px per side. */
+ /* Having said that, 26px - 8px is 18px. We need negative value to position it correctly. */
+ // margin-top: -18px;
+ -moz-box-shadow:    0 0 7px grey;
+ -webkit-box-shadow: 0 0 7px grey;
+ box-shadow: 0 0 4px #ccc;}
 
 .dropdown-content {
   margin-top: 2em;
@@ -137,13 +149,28 @@ input#q {
 // // }
 // //
 .card.card-block {
+  margin-bottom: 1.5em;
   // border:1px solid white;
-  border-radius: 10px;
+  border: solid lightgrey 1px;
+  border-radius: 5px;
   // background-color: white;
   background-color: rgba(255, 255, 255, 0.80);
-  margin-bottom: 2em;
-  border-style: outset;
+  // margin-bottom: 3em;
+  // border-style: outset;
   // background:rgba(255,255,255,0.5);
+}
+
+.card.card-block:hover {
+  // width: 105%;
+ /* This is 52px total. 1/2 of that is for top and the other half is for bottom. */
+ // height: 105;
+ /* Below we are not using -26px for margin-top because .box has 6px border and 10px margin. */
+ /* That 16px is then divide by 2 since it's for both top and bottom, or 8px per side. */
+ /* Having said that, 26px - 8px is 18px. We need negative value to position it correctly. */
+ // margin-top: -18px;
+-moz-box-shadow:    0 0 7px grey;
+-webkit-box-shadow: 0 0 7px grey;
+box-shadow: 0 0 4px #ccc;
 }
 //
 // select#topic_search {
@@ -176,7 +203,14 @@ ul {
   // background: rgba(0,0,0,0.3);
   background-color: white;
   margin-bottom: 5em;
-  border-style: inset;
+  box-shadow: 0 0 2px white;
+
+
+}
+
+.dashboard.col-lg-12:hover {
+  box-shadow: 0 0 10px white;
+  border: solid 1px lightgrey;
 
 }
 
@@ -216,7 +250,16 @@ user-select: none;
   color: black;
   font-size: 25px;
   border-radius: 10px;
-  border-style: outset;
+  border: solid lightgrey 1.25px;
+}
+
+.dashboardtitle:hover {
+  // height: 102%;
+  // width: 100.5%;
+  border: solid lightgrey 1px;
+  -moz-box-shadow:    0 0 7px grey;
+  -webkit-box-shadow: 0 0 7px grey;
+  box-shadow: 0 0 4px #ccc;
 }
 
 .dashboardtitle img {

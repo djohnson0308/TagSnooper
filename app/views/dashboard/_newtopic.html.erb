@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+<button type="button" class="new_topic_button btn btn-success" data-toggle="modal" data-target="#myModal">
   New Topic
 </button>
 
@@ -15,14 +15,14 @@
         <%= form_for @new_topic do |f| %>
 
           <div class="field">
-            <%= f.label :name, :autofocus=>true %>
-            <%= f.text_field :name, :autofocus=>true %>
+            <%= f.label :name, remote: true %>
+            <%= f.text_field :name, id: 'another_temp_id', remote: true %>
           </div>
 
       </div>
       <div class="modal-footer">
 
-        <%= f.submit 'Create Topic', class: "btn btn-success" %>
+        <%= f.submit 'Create Topic', class: "submit_button btn btn-success", remote: true %>
 
       </div>
       <% end %>

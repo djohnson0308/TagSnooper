@@ -8,6 +8,11 @@ html {
     height: 100%;
 }
 
+.headline {
+  margin-top: -5em;
+}
+
+
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
 of those sections to manage the look and feel of the site. */
@@ -18,7 +23,8 @@ of those sections to manage the look and feel of the site. */
 
 .navbar.navbar-default.navbar-fixed-top {
   height: 50px !important;
-padding: 0 !important;
+  padding: 0 !important;
+  background-color: white;
 }
 
 .access {
@@ -44,7 +50,7 @@ div.col-md-6 {
 
 .access.col-md-5 {
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
   height: 11em;
   margin-left: 6em;
@@ -55,6 +61,12 @@ div.col-md-6 {
 
 .access button {
   margin-bottom: 1em;
+  border-radius: 5px;
+  border: none;
+  background-color: #5899B9;
+  height: 50px;
+  width: 75px;
+  color: white;
 }
 
 strong {
@@ -191,11 +203,17 @@ body{
 }
 
 
+
+
 // ---------footer ---------- //
 
 footer {
 
     background-color: white;
+}
+
+ul a {
+  color: #5899B9;
 }
 
 // --------- misc --------- //

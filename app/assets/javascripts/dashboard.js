@@ -11,15 +11,21 @@ $(document).on('turbolinks:load', function(){
   });
 });
 
-function deleteTopic(){
-  var deleteTopicName = $('#topic_search option:selected').text();
-  var url = '/topics/' + deleteTopicName;
-  $.ajax({
-    url: url,
-    type: 'DELETE'
+function deleteTopic() {
+  swal({
+    title: "Are you sure?",
+    text: "Are you sure that you want to delete this topic?",
+    type: "warning",
+    showCancelButton: true,
+    closeOnConfirm: false,
+    confirmButtonText: "Yes, delete it!",
+    confirmButtonColor: "#ec6c62"
+  }, function() {
+    var deleteTopicName = $('#topic_search option:selected').text();
+    var url = '/topics/' + deleteTopicName;
+    $.ajax({
+      url: url,
+      type: 'DELETE'
+    });
   });
 }
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})

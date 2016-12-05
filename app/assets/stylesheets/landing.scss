@@ -37,7 +37,10 @@ of those sections to manage the look and feel of the site. */
   // line-height: 0.8;
   // letter-spacing: 3px;
   font-weight: lighter;
+}
 
+h1.access {
+  margin-left: 1.5em;
 }
 
 h3.access {
@@ -50,11 +53,12 @@ div.col-md-6 {
 
 .access.col-md-5 {
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   height: 11em;
   margin-left: 6em;
   margin-bottom: 2em;
+  margin-top: 3em;
   height: inherit;
   width: inherit;
 }
@@ -176,6 +180,7 @@ strong {
 .circles.col-md-3 {
   float: left;
   list-style-type: none;
+  margin-top: 5em;
 }
 
 li img {

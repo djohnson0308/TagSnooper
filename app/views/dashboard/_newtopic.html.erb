@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-  New Topic
+  CREATE TOPIC
 </button>
 
 <!-- Modal -->
@@ -9,7 +9,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">New Topic</h4>
+        <h4 class="modal-title" id="myModalLabel">CREATE</h4>
       </div>
       <div class="modal-body">
         <%= form_for @new_topic do |f| %>
@@ -22,7 +22,7 @@
       </div>
       <div class="modal-footer">
 
-        <%= f.submit 'Create Topic', class: "btn btn-success" %>
+        <%= f.submit 'CREATE TOPIC', class: "btn btn-success" %>
 
       </div>
       <% end %>

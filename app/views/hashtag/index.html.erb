@@ -11,7 +11,7 @@
         <%= form_tag("/hashtags", method: "get") do %>
         <%# label_tag(:q, "Snoop for:") %>
         <%= text_field_tag (:hashtag_search), nil, placeholder: "Snoop for..", id: "hashtag_search", required: true, autofocus: true%>
-        <%# submit_tag("Snoop") %>
+        <%= button_tag ("Snoop"), class: "btn", data: {disable_with: "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i>"}%>
         <% end %>
 
 

@@ -1,4 +1,3 @@
-
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
@@ -36,14 +35,17 @@
                         <% end %>
                         <% yield %></a>
                     </li>
-                  </ul>
-                  <div class="sessionstat">
+                    <li>
                       <% if current_user %>
                       <%= link_to "LOGOUT", '/logout' %>
                       <% else %>
-                      <div class="login-button">  <%= link_to 'LOGIN', '/login' %> | <%= link_to 'SIGNUP', '/signup' %> </div>
+                      <%= link_to 'LOGIN', '/login' %>
+                    </li>
+                    <li>
+                      <%= link_to 'SIGNUP', '/signup' %> </div>
                       <% end %></div>
-                  </div>
+                    </li>
+                  </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -56,24 +58,25 @@
         <div class="container">
             <div class="row">
               <div class="headline col-lg-12">
-                <h1 class="access">ACCESS TO THE MOST RELEVANT HASHTAGS!</h1>
+                <h1 class="access">ACCESS TO THE MOST RELEVANT HASHTAGS.</h1>
               </div>
                 <div class="col-md-6">
                       <div class="access col-md-5 box">
                       <li>
-                      <h3 class="access">Login to Start Snooping!</h3>
+                      <h4 class="access">LOGIN TO START SNOOPING!</h4>
                       <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
                       <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
                       <% if current_user %>
-                       <strong> Welcome Back, <%= current_user.name %> </strong>
-                      <%= link_to "LOGOUT", '/logout' %>
+                      <li><strong> Welcome Back, <%= current_user.name %> </strong></li>
+                      <li>\</li>
+                      <li><%= link_to '<button type="button" class="button">LOGOUT</button>'.html_safe, '/logout' %></li>
                       <% else %>
                       <%= link_to '<button type="button" class="button">LOGIN</button>'.html_safe, '/login' %>
                     </li>
                     </div>
                     <div class="access col-md-5 box">
                       <li>
-                      <h3 class="access">Create an Account to Save Hashtags, Create Topics, and More.</h3>
+                      <h4 class="access">CREATE AN ACCOUNT TO SEARCH HASHTAGS, CREATE TOPICS, SAVE YOUR SEARCHES, AND MORE!</h4>
                       <%= link_to '<button type="button" class="button">SIGNUP</button>'.html_safe, '/signup' %>
                       <% end %>
                       <%= yield %>
@@ -116,9 +119,9 @@
                 </div>
                 <div class="col-md-12">
                   <ul>
-                    <li class="desc col-md-4">Enter any #hashtag chosen by you</li>
-                    <li class="desc col-md-4">Get a list of the most relevant tags related to your specific audience</li>
-                    <li class="desc col-md-4">Save them and keep them organized by topics</li>
+                    <li class="desc col-md-4">SEARCH ANY HASHTAG OR SUBJECT</li>
+                    <li class="desc col-md-4">GET A LIST OF THE MOST RELEVANT HASHTAGS</li>
+                    <li class="desc col-md-4">SAVE YOUR SEARCHES AND ORGANIZE BY TOPICS</li>
                   </ul>
                 </div>
             </div>
@@ -134,13 +137,13 @@
                 </div>
                 <div class="col-md-12">
                   <ul>
-                  <li class="circles col-md-3"><img src="https://s17.postimg.org/9ibbs8hwv/imageedit_2_8926941055.gif" alt="cr"><font color="white"><h4>CRISTIAN CRAVELLO</h4></br>CMO</font></li>
+                  <li class="circles col-md-3"><img src="https://s17.postimg.org/9ibbs8hwv/imageedit_2_8926941055.gif" alt="cr"><font color="white"><h3>CRISTIAN CRAVELLO</h3></br><h4>CMO</h4></font></li>
 
-                  <li class="circles col-md-3"><img src="https://s18.postimg.org/zcq1a35fd/imageedit_1_6459561802.gif" alt="av"><font color="white"><h4>ALESSANDRA VASQUEZ</h4></br>CFO</font></li>
+                  <li class="circles col-md-3"><img src="https://s18.postimg.org/zcq1a35fd/imageedit_1_6459561802.gif" alt="av"><font color="white"><h3>ALESSANDRA VASQUEZ</h3></br><h4>CFO</h4></font></li>
 
-                  <li class="circles col-md-3"><img src="https://s15.postimg.org/8otw5x70r/imageedit_2_5032938431.gif" alt="dj"><font color="white"><h4>DEVON JOHNSON</h4></br>CTO</font></li>
+                  <li class="circles col-md-3"><img src="https://s15.postimg.org/8otw5x70r/imageedit_2_5032938431.gif" alt="dj"><font color="white"><h3>DEVON JOHNSON</h3></br><h4>CTO</h4></font></li>
 
-                  <li class="circles col-md-3"><img src="https://s17.postimg.org/bo4ao1o5r/imageedit_1_9746226061.gif" alt="dj"><font color="white"><h4>NIKOLAS YANEZ</h4></br>COO</font></li>
+                  <li class="circles col-md-3"><img src="https://s17.postimg.org/bo4ao1o5r/imageedit_1_9746226061.gif" alt="dj"><font color="white"><h3>NIKOLAS YANEZ</h3></br><h4>COO</h4></font></li>
                 </ul>
                 </div>
             </div>
@@ -154,15 +157,15 @@
         <div class='row'>
           <div class='col-md-3 col-sm-4 col-xs-6'>
             <h4>WHO WE ARE</h4>
-            <p><i>TagSnooper</i> is the best way to search for the most relevant hashtags according to any specific topic.</p>
+            <p><i>TAGSNOOPER</i> IS THE BEST WAY TO SEARCH FOR THE MOST RELEVANT HASHTAGS ACCORDING TO ANY SPECIFIC TOPIC.</p>
           </div>
 
           <div class='col-md-offset-1 col-sm-2 col-xs-6'>
             <h4>LINKS</h4>
             <ul class='list-unstyled'>
               <li><a href='/'>HOME</a></li>
-              <li><a href='stations.html'>ABOUT</a></li>
-              <li><a href='stations.html'>CONTACT</a></li>
+              <li><a href='#about'>ABOUT</a></li>
+              <li><a href='#services'>CONTACT</a></li>
 
             </ul>
           </div>
@@ -172,7 +175,7 @@
           <div class='col-sm-2 col-xs-6'>
             <h4>STAY IN TOUCH</h4>
             <ul class='list-unstyled'>
-              <li><a href='/blog'>BLOG</a></li>
+              <li><a href='/'>BLOG</a></li>
               <li><a href='http://twitter.com/'>TWITTER</a></li>
               <li><a href='http://facebook.com/'>FACEBOOK</a></li>
             </ul>
@@ -181,11 +184,11 @@
           <div class='col-md-3 col-md-offset-1 col-sm-4 col-xs-6'>
             <h4>CONTACT</h4>
             <ul class='list-unstyled'>
-              <li><i class='glyphicon glyphicon-globe'></i> Miami, FL</li>
+              <li><i class='glyphicon glyphicon-globe'></i> MIAMI, FL</li>
               <li><i class='glyphicon glyphicon-phone'></i> 1800-55-SNOOP</li>
-              <li><i class='glyphicon glyphicon-envelope'></i> <a href=''>CONTACT@TAGSNOOPER.com</a></li>
+              <li><i class='glyphicon glyphicon-envelope'></i> <a href=''>support@TAGSNOOPER.com</a></li>
             </ul>
-            <p>TagSnooper&copy;2016.</p>
+            <p>TAGSNOOPER&copy;2016.</p>
           </div>
         </div>
       </div>

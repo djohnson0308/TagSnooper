@@ -11,28 +11,28 @@
            <ul>
 
              <li class="card card-block" style="width: 18rem; height:18rem">
-               <h3 class="card-title">Search Hashtags</h3>
-               <p class="card-text">Search specific topics for hashtags</p>
-               <a href="/hashtags"><button type="button" class="btn btn-primary">Search</button></a>
+               <h3 class="card-title">SEARCH HASHTAGS</h3>
+               <p class="card-text">SEARCH SPECIFIC TOPICS FOR HASHTAGS</p>
+               <a href="/hashtags"><button type="button" class="btn btn-primary">SEARCH</button></a>
              </li>
 
              <li class="card card-block" style="width: 18rem; height:18rem">
-               <h3 class="card-title">New Topic</h3>
-               <p class="card-text">Create a topic for each search you would like to save</p>
+               <h3 class="card-title">NEW TOPIC</h3>
+               <p class="card-text">CREATE A TOPIC FOR EACH SEARCH YOU WANT TO SAVE</p>
                <%= render 'newtopic' %>
              </li>
 
              <li class="card card-block" style="width: 18rem; height:16rem">
-             <h3 class="card-title">Delete Topic</h3>
-             <p class="card-text">Delete any topic you do not want anymore</p>
-             <%= button_tag 'Delete Topic', onclick: "deleteTopic()", class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this topic?"} %>
+             <h3 class="card-title">DELETE TOPIC</h3>
+             <p class="card-text">DISCARD ANY TOPIC YOU DON'T WANT ANYMORE</p>
+             <%= button_tag 'DELETE', onclick: "deleteTopic()", class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this topic?"} %>
              </li>
        </div>
 
        <div class="col-md-9">
          <ul>
            <li class="dropdown">
-             <h3>Your Topics</h3>
+             <h3>MY TOPICS</h3>
                <% if @topic %>
                <div class="dropdown-content">
                <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name', @topic.id), id: "topic_search" %>

@@ -106,7 +106,7 @@
 }
 
 select#topic_search {
-  width: 20%;
+  width: 35%;
   height: 35px;
   border-style: outset;
 }
@@ -249,4 +249,8 @@ h1.dashboardtitle {
   font-family: 'Source Sans Pro', sans-serif !important;
   font-weight: lighter;
   font-size: 22px;
+}
+
+button.new_topic_button.btn.btn-success {
+  padding-left: 6px;
 }

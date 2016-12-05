@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'sweetalert-rails'
 gem 'jquery-validation-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'

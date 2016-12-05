@@ -22,6 +22,10 @@ form.navbar-form.navbar-left.search-form {
     float: none !important;
 }
 
-#submit_button {
+.submit_button {
   width: 15rem;
+}
+
+.dashboard.col-lg-12 {
+    padding-bottom: 2em;
 }

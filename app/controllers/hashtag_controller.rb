@@ -3,8 +3,8 @@ require 'twitter_search'
 class HashtagController < ApplicationController
 
   def index
-    if params[:q]
-      @results = Hashtag.tweet_search(params[:q]).take(15)
+    if params[:hashtag_search]
+      @results = Hashtag.tweet_search(params[:hashtag_search]).take(15)
     end
   end
 
@@ -13,6 +13,7 @@ class HashtagController < ApplicationController
     params[:hashtag_values].each do |hashtag|
       Hashtag.create!(name: hashtag, count: params[hashtag].to_i, topic_id: topic_id)
     end
+    redirect_to dashboard_path
   end
 
   private

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'jquery-validation-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'
 gem 'compass'

@@ -23,7 +23,7 @@ padding: 0 !important;
 
 .access {
   font-family: 'Source Sans Pro', sans-serif;
-  color: black;
+  color: white;
   // font-family:'Open Sans',Arial,Helvetica Neue,sans-serif;
   // width: 100%;
   // font-size: 25px;
@@ -34,12 +34,31 @@ padding: 0 !important;
 
 }
 
+h3.access {
+  color: black;
+}
+
+div.col-md-6 {
+  margin-left: -12em;
+}
+
 .access.col-md-5 {
   list-style-type: none;
   background-color: rgba(255, 255, 255, 0.65);
   border-radius: 10px;
   height: 11em;
   margin-left: 6em;
+  margin-bottom: 2em;
+  height: inherit;
+  width: inherit;
+}
+
+.access button {
+  margin-bottom: 1em;
+}
+
+strong {
+  color: black;
 }
 
 .works {
@@ -114,25 +133,28 @@ padding: 0 !important;
     background: linear-gradient(131deg, #565d79, #704d4d, #675d78, #486087, #88d7d1, #9dd2b4);
     background-size: 1200% 1200%;
 
--webkit-animation: TagSnooper 59s ease infinite;
--moz-animation: TagSnooper 59s ease infinite;
-animation: TagSnooper 59s ease infinite;
+    background: linear-gradient(131deg, #675d78, #486087, #88d7d1, #9dd2b4);
+    background-size: 800% 800%;
 
-@-webkit-keyframes TagSnooper {
-    0%{background-position:52% 0%}
-    50%{background-position:49% 100%}
-    100%{background-position:52% 0%}
-}
-@-moz-keyframes TagSnooper {
-    0%{background-position:52% 0%}
-    50%{background-position:49% 100%}
-    100%{background-position:52% 0%}
-}
-@keyframes TagSnooper {
-    0%{background-position:52% 0%}
-    50%{background-position:49% 100%}
-    100%{background-position:52% 0%}
-}
+    -webkit-animation: TagSnooper 59s ease infinite;
+    -moz-animation: TagSnooper 59s ease infinite;
+    animation: TagSnooper 59s ease infinite;
+
+    @-webkit-keyframes TagSnooper {
+        0%{background-position:52% 0%}
+        50%{background-position:49% 100%}
+        100%{background-position:52% 0%}
+    }
+    @-moz-keyframes TagSnooper {
+        0%{background-position:52% 0%}
+        50%{background-position:49% 100%}
+        100%{background-position:52% 0%}
+    }
+    @keyframes TagSnooper {
+        0%{background-position:52% 0%}
+        50%{background-position:49% 100%}
+        100%{background-position:52% 0%}
+      }
     // background: #4CA1AF; /* fallback for old browsers */
     // background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
     // background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -179,6 +201,8 @@ footer {
 // --------- misc --------- //
 
 
+
+// -----------Intro Section: Background Transparent Color --------//
 .intro-section.bg-img {
   width: 100%;
   height: 100%;
@@ -193,6 +217,6 @@ footer {
 	bottom: 0;
 	left: 0;
 	background-image: linear-gradient(to bottom right,#4CA1AF,#4CA1AF);
-	opacity: .6;
+	opacity: .4;
   }
 }

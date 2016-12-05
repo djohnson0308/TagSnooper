@@ -3,11 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .sessionstat {
   margin-top: 4mm;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-weight: lighter;
+  font-size: 17px;
 }
 
 #dashintro {
     height: auto;
-    padding-top: 150px;
+    padding-top: 75px;
     text-align: center;
     background: linear-gradient(47deg, #3b81a1, #344fbf);
     background-size: 400% 400%;
@@ -90,16 +94,19 @@
   border-style: outset;
 }
 
+.dropdown-content {
+  margin-top: 2em;
+  margin-bottom:1.5em;
+}
+
 .dropdownitem {
   margin-bottom: .75em;
   font-size: 25px
 }
 
-// .dropdownitem::first-letter {
-//   color: #5899B9;
-// }
-
-
+select#topic_search {
+  width: 50%;
+}
 
 li .dropdown {
   padding-bottom: 5em;
@@ -131,7 +138,7 @@ input#q {
   border-radius: 10px;
   // background-color: white;
   background-color: rgba(255, 255, 255, 0.80);
-  margin-bottom: 5em;
+  margin-bottom: 2em;
   border-style: outset;
   // background:rgba(255,255,255,0.5);
 }
@@ -154,6 +161,9 @@ input#q {
 ul {
   list-style-type: none;
   display: inline;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-weight: lighter;
 }
 
 .dashboard.col-lg-12 {
@@ -190,4 +200,7 @@ h1 a img {
 
 h1.dashboardtitle {
   font-size: 32px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: black;
+  font-weight: lighter;
 }

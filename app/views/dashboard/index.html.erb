@@ -5,9 +5,9 @@
 
      <div class="dashboard col-lg-12">
        <div class="dashboardnav">
-         <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>Dashboard</h1>
+         <h1 class="dashboardtitle"><a href="/dashboard"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img></a>DASHBOARD</h1>
        </div>
-         <div class="col-md-6">
+         <div class="col-md-3">
            <ul>
 
              <li class="card card-block" style="width: 18rem; height:18rem">
@@ -29,7 +29,7 @@
              </li>
        </div>
 
-       <div class="col-md-6">
+       <div class="col-md-9">
          <ul>
            <li class="dropdown">
              <h3>Your Topics</h3>
@@ -39,12 +39,9 @@
                <% end %>
              </div>
                <% if @topic %>
-
-
                <% @topic.hashtags.each do |ht| %>
                <div class="dropdownitem">
                <span style="color: #5899B9">#</span><%= ht.name.capitalize %>
-
                </div>
              <% end %>
            <% end %>

@@ -11,14 +11,15 @@
         <%= form_tag("/hashtags", method: "get") do %>
         <%# label_tag(:q, "Snoop for:") %>
         <%= text_field_tag (:hashtag_search), nil, placeholder: "Snoop for..", id: "hashtag_search", required: true, autofocus: true%>
-        <%= button_tag ("Snoop"), class: "btn", data: {disable_with: "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i>"}%>
+        <%= button_tag ("SNOOP"), class: "btn-success", data: {disable_with: "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i>"}%>
         <% end %>
 
 
         <% if defined?(@results) %>
 
         <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
-          <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name') %>
+          <!-- <#%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name') %> -->
+          <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name'), id: "topic_search" %>
             <% @results.each do |user_hashtag, hashtag_count| %>
             <div class="hashtags col-lg-12">
               <div class="dropdownitem"><span style="color: #5899B9">#</span><%= user_hashtag.capitalize %>: <%= hashtag_count %>
@@ -26,7 +27,8 @@
               </div>
             </div>
             <% end %>
-            <input class="btn btn-success submit_button" type="submit" value="Save Snoops"><a href="/dashboard"></a></input>
+            <!-- <input class="btn btn-success submit_button" type="submit" value="SAVE SNOOPS"><a href="/dashboard"></a></input> -->
+            <%= button_tag ("SAVE"), class: "btn-success", href: "/dashboard" %>
           <% end %>
 
         <% end %>

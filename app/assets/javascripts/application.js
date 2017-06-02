@@ -19,9 +19,6 @@
 //= require_tree .
 //= require sweetalert
 
-$(window).load(function() {
-   $('#loading').hide();
-});
 // smooth scrolling to section function
 $(document).ready(function(){
   // Add smooth scrolling to all links

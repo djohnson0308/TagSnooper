@@ -3,14 +3,16 @@
   <div class="container">
     <div class="row">
       <div class="login col-md-7 col-xs-7">
-				<h2>LOG IN</h2>
-        <p>Please fill out the required fields below.</p>
-	    	<%= form_tag '/login' do %>
-		    	<%= text_field_tag :email,"", placeholder: "Email", :autofocus=>true %>
-		      <%= password_field_tag :password, "", placeholder: "Password" %>
-          <a href="/signup">create an account</a>
-		      <%= submit_tag "SUBMIT", class: "submit btn btn-primary btn-block btn-large" %>
-	    	<% end %>
+        <div class="login-text">
+  				<h2>LOG IN</h2>
+          <p>Please fill out the required fields below.</p>
+  	    	<%= form_tag '/login' do %>
+  		    	<%= text_field_tag :email,"", placeholder: "Email", :autofocus=>true %>
+  		      <%= password_field_tag :password, "", placeholder: "Password" %>
+            <a href="/signup">create an account</a>
+  		      <%= submit_tag "SUBMIT", class: "submit btn btn-primary btn-block btn-large" %>
+  	    	<% end %>
+        </div>
 			</div>
 		</div>
 	</div>

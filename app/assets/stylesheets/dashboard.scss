@@ -41,6 +41,7 @@
   font-size: 20px
 }
 select#topic_search {
+  background-color: #fff;
   width: 35%;
   height: 35px;
   border-style: outset;
@@ -124,6 +125,7 @@ user-select: none;
   font-size: 25px;
   border-radius: 10px;
   border: solid lightgrey 1.25px;
+  padding-top: 15px;
 }
 .dashboardtitle:hover {
   border: solid lightgrey 1px;

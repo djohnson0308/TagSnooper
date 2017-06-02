@@ -4,28 +4,30 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">CREATE</h4>
+<div class="container text-center">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">CREATE</h4>
+        </div>
+        <div class="modal-body">
+          <%= form_for @new_topic do |f| %>
+
+            <div class="field">
+              <%= f.label :name, remote: true %>
+              <%= f.text_field :name, id: 'another_temp_id', remote: true %>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+
+          <%= f.submit 'Create Topic', class: "submit_button btn btn-success", remote: true %>
+
+        </div>
+        <% end %>
       </div>
-      <div class="modal-body">
-        <%= form_for @new_topic do |f| %>
-
-          <div class="field">
-            <%= f.label :name, remote: true %>
-            <%= f.text_field :name, id: 'another_temp_id', remote: true %>
-          </div>
-
-      </div>
-      <div class="modal-footer">
-
-        <%= f.submit 'Create Topic', class: "submit_button btn btn-success", remote: true %>
-
-      </div>
-      <% end %>
     </div>
   </div>
 </div>

@@ -34,13 +34,15 @@ form.navbar-form.navbar-left.search-form {
 input#hashtag_search {
     width: 200px;
     background-color: white;
-    border: 1px solid black;
-    box-shadow: 1px 4px 4px #888888;
+    border: 1px solid grey;
+    box-shadow: 1px 4px 4px lightgrey;
     color: black;
 }
 
 .topic_search {
-    width: 35%;
+    background-color: #fff;
+    width: 19%;
     height: 35px;
     border-style: outset;
+    margin-bottom: 40px;
 }

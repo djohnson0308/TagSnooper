@@ -16,9 +16,8 @@
   color: #4ca8cf;
 }
 .login-nav {
-  border: 1px solid #c3e2e5;
+  border: 1px solid lightgrey;
   border-radius: 8px;
-  padding-top: 0px;
   margin-left: 10px;
 }
 .signup-nav {
@@ -28,7 +27,7 @@
   padding-top: 0px;
   margin-left: 25px;
 }
-.signup-nav>li {
+.signup-nav>a {
   color: #4ca8cf !important;
 }
 .current-user {

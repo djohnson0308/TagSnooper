@@ -1,34 +1,17 @@
 <%= render 'navbar' %>
-
-<!-- <section id="intro" class="intro-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="access">Login</h1>
-                <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a>
-                <div>
-								<%= form_tag '/login' do %>
-
-                <strong> Email: <%= text_field_tag :email %>
-                Password:</strong> <%= password_field_tag :password %>
-                <%= submit_tag "Submit" %>
-
-              	<% end %>
-            </div>
-
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-
-
-<div class="login" >
-	<h1>LOG IN</h1>
-    	<%= form_tag '/login' do %>
-    	<%= text_field_tag :email,"", placeholder: "Email", :autofocus=>true %>
-      <%= password_field_tag :password, "", placeholder: "Password" %>
-      <%= submit_tag "SUBMIT", class: "btn btn-primary btn-block btn-large" %>
-    <% end %>
-</div>
+<section id="login">
+  <div class="container">
+    <div class="row">
+      <div class="login col-md-7 col-xs-7">
+				<h2>LOG IN</h2>
+        <p>Please fill out the required fields below.</p>
+	    	<%= form_tag '/login' do %>
+		    	<%= text_field_tag :email,"", placeholder: "Email", :autofocus=>true %>
+		      <%= password_field_tag :password, "", placeholder: "Password" %>
+          <a href="/signup">create an account</a>
+		      <%= submit_tag "SUBMIT", class: "submit btn btn-primary btn-block btn-large" %>
+	    	<% end %>
+			</div>
+		</div>
+	</div>
+</section>

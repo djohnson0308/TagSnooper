@@ -1,0 +1,372 @@
+/*
+ * Start Bootstrap - Landing Page (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Muli","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+.topnav {
+    font-size: 17px;
+    font-weight: 300;
+    height: 100px;
+}
+.topnav img {
+  height: 50px;
+  margin-top: 10px;
+}
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #f8f8f8;
+    background: url('/assets/tagsnooper-landing-3.jpg') no-repeat center center;
+    background-size: cover;
+}
+@media only screen and (max-device-width: 768px) {
+   /* define mobile specific styles come here */
+   .intro-header {
+     padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+     padding-bottom: 50px;
+   }
+   .intro-message {
+     position: relative;
+   }
+   .intro-message h3 {
+     font-size: 40px;
+   }
+ }
+.intro-message {
+    position: relative;
+    padding-top: 10%;
+}
+.intro-message h3 {
+  font-size: 28px;
+  padding-bottom: 2%;
+}
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+.intro-message p {
+  font-size: 15px;
+  font-weight: 100;
+  letter-spacing: .5px;
+  line-height: 1.7;
+}
+@media only screen and (max-device-width: 768px) {
+  .intro-message p {
+    font-size: 22px;
+  }
+}
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.intro-message > h3 {
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+.hashtag {
+  padding-top: 40%;
+}
+.hash {
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+@media only screen and (max-device-width: 768px) {
+   /* define mobile specific styles come here */
+   .hashtag {
+     padding-top: 12%;
+   }
+   .hash {
+     font-size: 30px;
+   }
+ }
+.description {
+  color: #d9fcff;
+  padding-bottom: 5%;
+  padding-left: 0px;
+}
+.create-log {
+  padding-left: 0px;
+}
+.buttons {
+  list-style-type: none;
+  display: inline-flex;
+  padding-left: 0px;
+}
+.buttons li {
+  padding-right: 20px;
+}
+.buttons li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.account {
+  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+.account:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+.account-button {
+  color: #fff;
+  background-color: #3ecf8e;
+  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+.login-1 {
+  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+.login-1:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+#how {
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #6b7c93;
+  background-color: #f3f3f5;
+}
+#how .works {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+#how h1 {
+  font-size: 28px;
+  color: #556375;
+}
+.works p {
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#how .icons {
+  margin-bottom: 50px;
+}
+#how .icons img {
+  height: 140px;
+  border-radius: 5px;
+}
+#how i {
+  font-size: 150px;
+}
+@media only screen and (max-device-width: 768px) {
+   /* define mobile specific styles come here */
+   #how .shrink img {
+     height: 110px;
+   }
+ }
+#team {
+  background-color: #fff;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-top: 1px solid #d8dce6;
+  border-bottom: 1px solid #d8dce6;
+}
+#team .create {
+  margin-top: 25px;
+}
+#team .account-button {
+  margin-left: 10px;
+  text-decoration: none;
+}
+#team .account-button:hover {
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+.login-button {
+  color: #7795f8;
+  background-color: #fff;
+  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  border-radius: 4px;
+  padding: 10px 50px;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+.login-button:hover {
+  color: #7795f8 !important;
+}
+.submit {
+  padding: 10px 0px 10px 0px;
+  margin: 40px 0px 20px 0px;
+}
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+  padding: 75px 0px 5px 0px;
+  background-color: #fff;
+  color: #5f6a76;
+  border-top: 1px solid #d8dce6;
+}
+footer .list-unstyled li {
+  margin-top: 20px;
+  font-size: 16px;
+}
+footer .list-unstyled li a {
+  text-decoration: none;
+}
+footer .icons {
+  display: inline-flex;
+  font-size: 25px;
+}
+footer .icons li {
+  margin: 150px 0px 0px 0px;
+}
+footer li a {
+  color: #8898aa;
+}
+footer li a:hover {
+  text-decoration: none;
+}
+footer li a:active {
+  color: #333447;
+  text-decoration: none;
+}
+footer .twitter:hover {
+  color: #4099FF;
+}
+footer .facebook {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+footer .facebook:hover {
+  color: #3B5998
+}
+footer .instagram:hover {
+  color: #b366b3;
+}
+footer .copyright {
+  margin-left: 50px;
+  border-top: 1px solid #d8dce6;
+}
+footer .copyright p {
+  margin-top: 10px;
+}

@@ -28,6 +28,7 @@ form.navbar-form.navbar-left.search-form {
 
 .dashboard.col-lg-12 {
     padding-bottom: 2em;
+    padding-top: 1em;
 }
 
 input#hashtag_search {

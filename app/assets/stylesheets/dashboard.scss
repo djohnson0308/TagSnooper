@@ -8,101 +8,26 @@
   font-weight: lighter;
   font-size: 17px;
 }
-
 #dashintro {
     height: auto;
-    padding-top: 75px;
+    padding-top: 150px;
     text-align: center;
-    background: linear-gradient(47deg, #3b81a1, #344fbf);
-    background-size: 400% 400%;
-    background: linear-gradient(320deg, #37677d, #505883, #8bbbad);
-    background-size: 600% 600%;
-
-    background: linear-gradient(131deg, #565d79, #704d4d, #675d78, #486087, #88d7d1, #9dd2b4);
-    background-size: 1200% 1200%;
-
-    -webkit-animation: TagSnooper 59s ease infinite;
-    -moz-animation: TagSnooper 59s ease infinite;
-    animation: TagSnooper 59s ease infinite;
-
-    @-webkit-keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
-    @-moz-keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
-    @keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
-
-    // background: #fff;
-   //  background-image: url("https://s15.postimg.org/8zu2ogdgb/MRld_Sx.jpg");
-   // background-color: #c6e2e9;
-  //  background: #4CA1AF; /* fallback for old browsers */
-  //  background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
-  //  background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);
 }
-
 #hashintro {
     height: 100%;
     overflow: auto;
     padding-top: 150px;
     text-align: center;
-    background: linear-gradient(47deg, #3b81a1, #344fbf);
-    background-size: 400% 400%;
-    background: linear-gradient(320deg, #37677d, #505883, #8bbbad);
-    background-size: 600% 600%;
-
-    background: linear-gradient(131deg, #565d79, #704d4d, #675d78, #486087, #88d7d1, #9dd2b4);
-    background-size: 1200% 1200%;
-
-    -webkit-animation: TagSnooper 59s ease infinite;
-    -moz-animation: TagSnooper 59s ease infinite;
-    animation: TagSnooper 59s ease infinite;
-
-    @-webkit-keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
-    @-moz-keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
-    @keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
+    background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);
   }
-
-
-
 .dropdown {
   font-size: 18px;
-  // background:rgba(255,255,255,0.5);
   border-radius: 10px;
-  // border: 1px solid white;
-  // background-color: white;
   background-color: rgba(255, 255, 255, 0.80);
   border: solid lightgrey 1px;
 }
-
 .dropdown:hover {
-  // width: 90%;
- /* This is 52px total. 1/2 of that is for top and the other half is for bottom. */
- // height: 90%;
- /* Below we are not using -26px for margin-top because .box has 6px border and 10px margin. */
- /* That 16px is then divide by 2 since it's for both top and bottom, or 8px per side. */
- /* Having said that, 26px - 8px is 18px. We need negative value to position it correctly. */
- // margin-top: -18px;
  -moz-box-shadow:    0 0 7px grey;
  -webkit-box-shadow: 0 0 7px grey;
  box-shadow: 0 0 4px #ccc;}
@@ -111,12 +36,10 @@
   margin-top: 2em;
   margin-bottom:1.5em;
 }
-
 .dropdownitem {
   margin-bottom: .75em;
   font-size: 20px
 }
-
 select#topic_search {
   width: 35%;
   height: 35px;
@@ -126,7 +49,6 @@ select#topic_search {
 li .dropdown {
   padding-bottom: 5em;
 }
-
 input#q {
     width: 160px;
     box-sizing: border-box;
@@ -143,50 +65,17 @@ input#q {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
-//
-// // input#q:focus{
-// //     width: 100%;
-// // }
-// //
 .card.card-block {
   margin-bottom: 1.5em;
-  // border:1px solid white;
   border: solid lightgrey 1px;
   border-radius: 5px;
-  // background-color: white;
   background-color: rgba(255, 255, 255, 0.80);
-  // margin-bottom: 3em;
-  // border-style: outset;
-  // background:rgba(255,255,255,0.5);
 }
-
 .card.card-block:hover {
-  // width: 105%;
- /* This is 52px total. 1/2 of that is for top and the other half is for bottom. */
- // height: 105;
- /* Below we are not using -26px for margin-top because .box has 6px border and 10px margin. */
- /* That 16px is then divide by 2 since it's for both top and bottom, or 8px per side. */
- /* Having said that, 26px - 8px is 18px. We need negative value to position it correctly. */
- // margin-top: -18px;
 -moz-box-shadow:    0 0 7px grey;
 -webkit-box-shadow: 0 0 7px grey;
 box-shadow: 0 0 4px #ccc;
 }
-//
-// select#topic_search {
-//     margin: 50px;
-//     border: 1px solid #111;
-//     background: transparent;
-//     width: 160px;
-//     padding: 5px 35px 5px 5px;
-//     font-size: 16px;
-//     /* border: 1px solid #ccc; */
-//     height: 34px;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     appearance: none;
-//     background: url('https://cdn0.iconfinder.com/data/icons/fast-forward/64/up-down-512.png') 96% / 15% no-repeat #fff;
-// }
 
 ul {
   list-style-type: none;
@@ -199,23 +88,11 @@ ul {
 .dashboard.col-lg-12 {
   border: none;
   border-radius: 10px;
-  // background:rgba(255,255,255,.98);
-  // background: rgba(0,0,0,0.3);
   background-color: white;
   margin-bottom: 5em;
   box-shadow: 0 0 2px white;
-
-
 }
-
-.dashboard.col-lg-12:hover {
-  box-shadow: 0 0 10px white;
-  border: solid 1px lightgrey;
-
-}
-
 .dashboardnav{
-  // background-color: white;
   background-color: rgba(255, 255, 255, 0.80);
   border-radius: 10px;
 }
@@ -241,42 +118,31 @@ border-radius: 4px;
 -moz-user-select: none;
 -ms-user-select: none;
 user-select: none;
-//   color: #fff;
-// background-color: #286090;
-// border-color: #204d74;
 }
-
 .dashboardtitle {
   color: black;
   font-size: 25px;
   border-radius: 10px;
   border: solid lightgrey 1.25px;
 }
-
 .dashboardtitle:hover {
-  // height: 102%;
-  // width: 100.5%;
   border: solid lightgrey 1px;
   -moz-box-shadow:    0 0 7px grey;
   -webkit-box-shadow: 0 0 7px grey;
   box-shadow: 0 0 4px #ccc;
 }
-
 .dashboardtitle img {
   width: 20%;
 }
-
 h1 a img {
   margin-bottom: .45em;
 }
-
 h1.dashboardtitle {
   font-size: 32px;
   font-family: 'Source Sans Pro', sans-serif;
   color: black;
   font-weight: lighter;
 }
-
 .btn-success {
   border-radius: 10px;
   border-style: none;
@@ -286,14 +152,14 @@ h1.dashboardtitle {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: lighter;
 }
-
 .btn.btn-success.submit_button {
   text-decoration: none;
   font-family: 'Source Sans Pro', sans-serif !important;
   font-weight: lighter;
   font-size: 22px;
 }
-
 button.new_topic_button.btn.btn-success {
-  padding-left: 6px;
+  padding-left: 7px;
+  margin-right: 0px;
+  width: 90px;
 }

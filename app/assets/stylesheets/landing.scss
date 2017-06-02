@@ -1,264 +1,204 @@
-body {
-    width: 100%;
-    height: 100%;
-}
-
-html {
-    width: 100%;
-    height: 100%;
-}
-
-.headline {
-  margin-top: -5em;
-}
-
-.about.col-lg-12.about {
-  color: white;
-}
-
-
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
-of those sections to manage the look and feel of the site. */
-.navbar-brand {
-  padding-top:0px !important;
-  padding-bottom:0px !important;
-}
-
-.navbar.navbar-default.navbar-fixed-top {
-  height: 50px !important;
-  padding: 0 !important;
-  background-color: white;
-}
-
-.navbar.navbar-default.navbar-fixed-top:hover {
-  box-shadow: 0 0 5px white;
-  border: solid 1px lightgrey;
-
-}
-
-.access {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  // font-family:'Open Sans',Arial,Helvetica Neue,sans-serif;
-  // width: 100%;
-  // font-size: 25px;
-  // text-transform: uppercase;
-  // line-height: 0.8;
-  // letter-spacing: 3px;
-  font-weight: lighter;
-}
-
-h1.access {
-  margin-left: 1.5em;
-}
-
-h3.access {
-  color: black;
-}
-
-div.col-md-6 {
-  margin-left: -12em;
-}
-
-.access.col-md-5 {
-  list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  height: 11em;
-  margin-left: 6em;
-  margin-bottom: 2em;
-  margin-top: 3em;
-  height: inherit;
-  width: inherit;
-}
-
-.access.col-md-5:hover {
-  box-shadow: 0 0 10px white;
-  border: solid 1px lightgrey;
-}
-
-.access button {
-  margin-bottom: 1em;
-  border-radius: 5px;
-  border: none;
-  background-color: #5899B9;
-  height: 50px;
-  width: 75px;
-  color: white;
-}
-
-strong {
-  color: black;
-}
-
-.works {
-  padding-bottom: 8em;
-}
-
-.icons {
-  padding-bottom: 3em;
-}
-
-.how {
- color: black;
- font-family: 'Source Sans Pro', sans-serif;
-}
-
- .desc {
-  list-style-type: none;
-  float: left;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 25px;
-}
-
-.fa.fa-search {
-  font-size: 60px;
-}
-
-.fa.fa-list {
-  font-size: 60px;
-}
-
-.fa.fa-archive {
-  font-size: 60px;
-}
-
-#intro {
-    height: auto;
-    padding-top: 150px;
-    text-align: center;
-   background: #4CA1AF; /* fallback for old browsers */
-   background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#landingintro {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-}
-
-
-
-#about {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
-    background-color: #fff;
-}
-
-.about.col-lg-12 {
-}
-
-.about {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-
-#services {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: linear-gradient(131deg, #565d79, #704d4d, #675d78, #486087, #88d7d1, #9dd2b4);
-    background-size: 1200% 1200%;
-
-    background: linear-gradient(131deg, #675d78, #486087, #88d7d1, #9dd2b4);
-    background-size: 800% 800%;
-
-    -webkit-animation: TagSnooper 59s ease infinite;
-    -moz-animation: TagSnooper 59s ease infinite;
-    animation: TagSnooper 59s ease infinite;
-
-    @-webkit-keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
-    @-moz-keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-    }
-    @keyframes TagSnooper {
-        0%{background-position:52% 0%}
-        50%{background-position:49% 100%}
-        100%{background-position:52% 0%}
-      }
-    // background: #4CA1AF; /* fallback for old browsers */
-    // background: -webkit-linear-gradient(to left, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
-    // background: linear-gradient(to left, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-
-
-.circles.col-md-3 {
-  float: left;
-  list-style-type: none;
-  margin-top: 5em;
-}
-
-.circles.col-md-3.nik {
-  margin-top: 50px;
-}
-
-li img {
-  height: 200px;
-  width: 200px;
-}
-
-
-// -------- Login & Signup Button ONLY --------//
-
-@import  url(https://fonts.googleapis.com/css?family=Montserrat);
-
-$button-bg-color: #348AA7;
-$button-border-color: #166E84;
-
-body{
-  font-family: Montserrat;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-
-// ---------footer ---------- //
-
-footer {
-
-    background-color: white;
-}
-
-ul a {
-  color: #5899B9;
-}
-
-// --------- misc --------- //
-
-
-
-// -----------Intro Section: Background Transparent Color --------//
-.intro-section.bg-img {
-  width: 100%;
-  height: 100%;
-  background: url('https://s14.postimg.org/hs7trakvl/Tag_Snooper_503817356.jpg') center center no-repeat;
-  background-size: cover;
-
-  &:before {
-    content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-image: linear-gradient(to bottom right,#4CA1AF,#4CA1AF);
-	opacity: .4;
-  }
-}
+// body,
+// html {
+//     width: 100%;
+//     height: 100%;
+// }
+// body,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//     font-family: "Muli","Helvetica Neue",Helvetica,Arial,sans-serif;
+// }
+// .topnav {
+//     font-size: 14px;
+//     height: 100px;
+// }
+// // .topnav img {
+// //   height: 50px;
+// //   margin-top: 10px;
+// // }
+// .lead {
+//     font-size: 18px;
+//     font-weight: 400;
+// }
+// .intro-header {
+//     // width: 100%;
+//     // height: 100%;
+//     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+//     padding-bottom: 50px;
+//     text-align: center;
+//     color: #f8f8f8;
+//     background: url(/assets/tagsnooper-landing.jpeg) no-repeat center center;
+//     background-size: cover;
+// }
+// .intro-message {
+//     position: relative;
+//     padding-top: 20%;
+//     padding-bottom: 20%;
+// }
+// .intro-divider {
+//     width: 400px;
+//     border-top: 1px solid #f8f8f8;
+//     border-bottom: 1px solid rgba(0,0,0,0.2);
+// }
+// .intro-message > h3 {
+//   font-size: 35px;
+//   letter-spacing: 1px;
+// }
+// @media(max-width:767px) {
+//     .intro-message {
+//         padding-bottom: 15%;
+//     }
+//
+//     .intro-message > h1 {
+//         font-size: 3em;
+//     }
+//
+//     ul.intro-social-buttons > li {
+//         display: block;
+//         margin-bottom: 20px;
+//         padding: 0;
+//     }
+//
+//     ul.intro-social-buttons > li:last-child {
+//         margin-bottom: 0;
+//     }
+//
+//     .intro-divider {
+//         width: 100%;
+//     }
+// }
+// // .description {
+// //   color: #d9fcff;
+// //   margin-bottom: 50px;
+// // }
+// // .description p {
+// //   font-size: 15px;
+// //   font-weight: 100;
+// //   letter-spacing: .5px;
+// // }
+// // .buttons {
+// //   list-style-type: none;
+// //   display: inline-flex;
+// //   padding-left: 0px;
+// // }
+// // .buttons li {
+// //   padding-right: 20px;
+// // }
+// // .buttons li a:hover {
+// //   text-decoration: none;
+// //   color: #fff;
+// // }
+// // .account {
+// //   text-shadow: 0 1px 3px rgba(36,180,126,.4);
+// //   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+// // }
+// // .account:hover {
+// //   transform: translateY(-1px);
+// //   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+// // }
+// // .account-button {
+// //   color: #fff;
+// //   background-color: #3ecf8e;
+// //   text-shadow: 0 1px 3px rgba(36,180,126,.4);
+// //   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+// //   border-radius: 4px;
+// //   padding: 10px 14px;
+// //   font-size: 14px;
+// //   transition: all .15s ease;
+// // }
+// // .login {
+// //   text-shadow: 0 1px 3px rgba(36,180,126,.4);
+// //   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+// // }
+// // .login:hover {
+// //   transform: translateY(-1px);
+// //   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+// // }
+// // .login-button {
+// //   color: #7795f8;
+// //   background-color: #fff;
+// //   text-shadow: 0 1px 3px rgba(36,180,126,.4);
+// //   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+// //   border-radius: 4px;
+// //   padding: 10px 50px;
+// //   font-size: 14px;
+// //   transition: all .15s ease;
+// // }
+// // .login-button:hover {
+// //   color: #7795f8 !important;
+// // }
+// .network-name {
+//     text-transform: uppercase;
+//     font-size: 14px;
+//     font-weight: 400;
+//     letter-spacing: 2px;
+// }
+// .content-section-a {
+//     padding: 50px 0;
+//     background-color: #f8f8f8;
+// }
+// .content-section-b {
+//     padding: 50px 0;
+//     border-top: 1px solid #e7e7e7;
+//     border-bottom: 1px solid #e7e7e7;
+// }
+// .section-heading {
+//     margin-bottom: 30px;
+// }
+// .section-heading-spacer {
+//     float: left;
+//     width: 200px;
+//     border-top: 3px solid #e7e7e7;
+// }
+// .banner {
+//     padding: 100px 0;
+//     color: #f8f8f8;
+//     background: url(../img/banner-bg.jpg) no-repeat center center;
+//     background-size: cover;
+// }
+// .banner h2 {
+//     margin: 0;
+//     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+//     font-size: 3em;
+// }
+// .banner ul {
+//     margin-bottom: 0;
+// }
+// .banner-social-buttons {
+//     float: right;
+//     margin-top: 0;
+// }
+//
+// @media(max-width:1199px) {
+//     ul.banner-social-buttons {
+//         float: left;
+//         margin-top: 15px;
+//     }
+// }
+// @media(max-width:767px) {
+//     .banner h2 {
+//         margin: 0;
+//         text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+//         font-size: 3em;
+//     }
+//     ul.banner-social-buttons > li {
+//         display: block;
+//         margin-bottom: 20px;
+//         padding: 0;
+//     }
+//     ul.banner-social-buttons > li:last-child {
+//         margin-bottom: 0;
+//     }
+// }
+// footer {
+//     padding: 50px 0;
+//     background-color: #f8f8f8;
+// }
+// p.copyright {
+//     margin: 15px 0 0;
+// }

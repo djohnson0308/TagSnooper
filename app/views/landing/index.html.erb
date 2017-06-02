@@ -1,210 +1,214 @@
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="/"><img src="https://s14.postimg.org/dvkhc3u81/Tag_Snooper_Logo.png"></img>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">HOW IT WORKS</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">ABOUT</a>
-                    </li>
-                    <li>
-                        <% if current_user %>
-                        <%= link_to "MY DASHBOARD", '/dashboard' %>
-                        <% else %>
-                        <%= link_to "MY DASHBOARD", '/login' %>
-                        <% end %>
-                        <% yield %></a>
-                    </li>
-                    <li>
-                      <% if current_user %>
-                      <%= link_to "LOGOUT", '/logout' %>
-                      <% else %>
-                      <%= link_to 'LOGIN', '/login' %>
-                    </li>
-                    <li>
-                      <%= link_to 'SIGNUP', '/signup' %> </div>
-                      <% end %></div>
-                    </li>
-                  </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<div id="loading">
+  <img id="loading-image" src="/assets/tagsnooper.gif" alt="Loading..." />
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand topnav" href="#"><img src="/assets/tagsnooper-logo.png" alt=""></a>
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Section -->
-    <section id="landingintro" class="intro-section bg-img">
-      <!-- <div class="bg-img"> -->
-        <div class="container">
-            <div class="row">
-              <div class="headline col-lg-12">
-                <h1 class="access">ACCESS TO THE MOST RELEVANT HASHTAGS</h1>
-              </div>
-                <div class="col-md-6">
-                      <div class="access col-md-5 box">
-                      <li>
-                      <h4 class="access">LOGIN TO START SNOOPING!</h4>
-                      <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
-                      <!-- <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> -->
-                      <% if current_user %>
-                      <li><strong> Welcome Back, <%= current_user.name %> </strong></li>
-                      <li>\</li>
-                      <li><%= link_to '<button type="button" class="button">LOGOUT</button>'.html_safe, '/logout' %></li>
-                      <% else %>
-                      <%= link_to '<button type="button" class="button">LOGIN</button>'.html_safe, '/login' %>
-                    </li>
-                    </div>
-                    <div class="access col-md-5 box">
-                      <li>
-                      <h4 class="access">CREATE AN ACCOUNT TO SEARCH HASHTAGS, CREATE TOPICS, SAVE YOUR SEARCHES, AND MORE!</h4>
-                      <%= link_to '<button type="button" class="button">SIGNUP</button>'.html_safe, '/signup' %>
-                      <% end %>
-                      <%= yield %>
-                      </li>
-                    </div>
-                </div>
-              <!-- </div> -->
-            </div>
-
-            <!-- <div class="search-bar">
-              <%#= form_tag("/", method: "get") do %>
-              <%#= text_field_tag (:q), nil, placeholder: "Snoop for.." %>
-              <%# end %>
-              <%# if defined?(@results) %>
-                <%# @results.each do |user_hashtag, hashtag_count| %>
-                <div class="hashtags">
-                  <%#= user_hashtag.capitalize %>: <%#= hashtag_count %>
-                <%# end %>
-            <%# end %>
-            </div>
-            </div> -->
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="works col-lg-12">
-                    <h1 class="how">HOW IT WORKS</h1>
-                </div>
-                <div class="icons col-md-12">
-                  <ul>
-                    <li class="col-md-4"><i class="fa fa-search" aria-hidden="true"></i></li>
-                    <li class="col-md-4"><i class="fa fa-list" aria-hidden="true"></i></li>
-                    <li class="col-md-4"><i class="fa fa-archive" aria-hidden="true"></i></li>
-                    <!-- <li class="col-md-4"><img src="http://www.etchedcomm.com/wp-content/uploads/2014/08/hashtag-use.png"></img></li>
-                    <li class="col-md-4"><img src="http://www.niccolomatterazzo.com/wp-content/uploads/2015/07/Hashtags-are-you-sure-that-you-are-using-them-correctly.jpg"></li>
-                    <li class="col-md-4"><img src="http://www.bookmorebrides.com/wp-content/uploads/2014/08/money-hashtag-copy.png"></img></li> -->
-                  </ul>
-                </div>
-                <div class="col-md-12">
-                  <ul>
-                    <li class="desc col-md-4">SEARCH ANY HASHTAG OR SUBJECT</li>
-                    <li class="desc col-md-4">GET A LIST OF THE MOST RELEVANT HASHTAGS</li>
-                    <li class="desc col-md-4">SAVE YOUR SEARCHES AND ORGANIZE BY TOPICS</li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="row">
-                <div class="about col-lg-12">
-                    <h1 class="about">MEET THE TEAM</h1>
-                </div>
-                <div class="col-md-12">
-                  <ul>
-                  <li class="circles col-md-3"><img src="https://s17.postimg.org/9ibbs8hwv/imageedit_2_8926941055.gif" alt="cr"><font color="white"><h3>CRISTIAN CRAVELLO</h3></br><h4>CMO</h4></font></li>
-
-                  <li class="circles col-md-3"><img src="https://s18.postimg.org/zcq1a35fd/imageedit_1_6459561802.gif" alt="av"><font color="white"><h3>ALESSANDRA VASQUEZ</h3></br><h4>CFO</h4></font></li>
-
-                  <li class="circles col-md-3"><img src="https://s15.postimg.org/8otw5x70r/imageedit_2_5032938431.gif" alt="dj"><font color="white"><h3>DEVON JOHNSON</h3></br><h4>CTO</h4></font></li>
-
-                  <li class="circles col-md-3 nik"><img src="https://s16.postimg.org/n0bdpm4it/148095993381218.gif" alt="ny"><font color="white"><h3>NIKOLAS YANEZ</h3></br><h4>COO</h4></font></li>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Footer -->
-
-    <footer class='navbar-bottom'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-md-3 col-sm-4 col-xs-6'>
-            <h4>WHO WE ARE</h4>
-            <p><i>TAGSNOOPER</i> IS THE BEST WAY TO SEARCH FOR THE MOST RELEVANT HASHTAGS ACCORDING TO ANY SPECIFIC TOPIC.</p>
-          </div>
-
-          <div class='col-md-offset-1 col-sm-2 col-xs-6'>
-            <h4>LINKS</h4>
-            <ul class='list-unstyled'>
-              <li><a href='/'>HOME</a></li>
-              <li><a href='#about'>ABOUT</a></li>
-              <li><a href='#services'>CONTACT</a></li>
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#team">About</a>
+                </li>
+                <li>
+                    <% if current_user %>
+                    <%= link_to "Dashboard", '/dashboard' %>
+                    <% else %>
+                    <%= link_to "Dashboard", '/login' %>
+                    <% end %>
+                    <% yield %></a>
+                </li>
+                <li class="login-nav">
+                  <% if current_user %>
+                  <%= link_to "Log out", '/logout' %>
+                  <% else %>
+                  <%= link_to 'Log in', '/login' %>
+                </li>
+                <li class="signup-nav">
+                  <%= link_to 'Sign up', '/signup' %>
+                  <% end %>
+                </li>
             </ul>
-          </div>
-
-          <div class='clearfix visible-xs'></div>
-
-          <div class='col-sm-2 col-xs-6'>
-            <h4>STAY IN TOUCH</h4>
-            <ul class='list-unstyled'>
-              <li><a href='/'>BLOG</a></li>
-              <li><a href='http://twitter.com/'>TWITTER</a></li>
-              <li><a href='http://facebook.com/'>FACEBOOK</a></li>
-            </ul>
-          </div>
-
-          <div class='col-md-3 col-md-offset-1 col-sm-4 col-xs-6'>
-            <h4>CONTACT</h4>
-            <ul class='list-unstyled'>
-              <li><i class='glyphicon glyphicon-globe'></i> MIAMI, FL</li>
-              <li><i class='glyphicon glyphicon-phone'></i> 1800-55-SNOOP</li>
-              <li><i class='glyphicon glyphicon-envelope'></i> <a href=''>support@TAGSNOOPER.com</a></li>
-            </ul>
-            <p>TAGSNOOPER&copy;2016.</p>
-          </div>
         </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- Header -->
+<section class="intro-header bg-img">
+   <div class="container">
+       <div class="row">
+         <div class="intro-message col-md-8 text-left">
+             <h3>Access to the Most Relevant Hashtags</h3>
+             <div class="description col-md-8 text-left">
+               <p>Tagsnooper is the best new platform to search for the most relevant hashtags according to any specific topic. Create an account to search hashtags, create topics, save your searches, and more!</p>
+             </div>
+             <div class="create-log col-md-8 text-left">
+               <ul class="buttons">
+                 <li class="account"><a href="/signup" class="account-button">CREATE ACCOUNT</a></li>
+                 <li class="login-1"><a href="/login" class="login-button">LOG IN</a></li>
+               </ul>
+             </div>
+         </div>
+         <div class="col-md-4">
+           <div class="hashtag hash col-md-offset-4 col-xs-offset-3 hash text-left">
+             #travel
+           </div>
+           <div class="hash col-md-offset-2 col-xs-offset-1 text-left">
+             #instatravel
+           </div>
+           <div class="hash text-left">
+             #traveling
+           </div>
+           <div class="hash col-md-offset-2 col-xs-offset-1 text-left">
+             #travelgram
+           </div>
+           <div class="hash col-md-offset-4 col-xs-offset-3 text-left">
+             #travelling
+           </div>
+           <div class="hash col-md-offset-6 col-xs-offset-5 text-left">
+             #mytravelgram
+           </div>
+           <div class="hash col-md-offset-8 col-xs-offset-7 text-left">
+             #travelingram
+           </div>
+           <div class="hash col-md-offset-10 col-xs-offset-9 text-left">
+             #igtravel
+           </div>
+           <div class="hash col-md-offset-12 col-xs-offset-11 text-left">
+             #traveler
+           </div>
+         </div>
+       </div>
+   </div>
+</section>
+<section id="team">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-7 col-xs-7 text-right">
+        <h2>Try it now for FREE!</h2>
       </div>
-    </footer>
+      <div class="create col-md-5 col-xs-5 text-left">
+        <a href="/signup" class="account-button">GET STARTED</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="how">
+  <div class="works container">
+    <div class="col-lg-12 text-center">
+        <h1>HOW IT WORKS</h1>
+        <!-- <p>Hashtags allow photos to be seen by additional people not following you. Hashtags will produce the most likes and organic followers.</p> -->
+        <p>Tagsnooper searches Twitter's database to find the best hashtag for your next tweet, instagram post, or marketing campaign. </p>
+    </div>
+    <div class="icons row">
+      <div class="shrink col-md-4 col-sm-4 text-center">
+        <!-- <div class="ion"><i class="ion-ios-search"></i></div> -->
+        <img src="/assets/tagsnooper-search.png" alt="">
+      </div>
+      <div class="col-md-4 col-sm-4 text-center">
+        <!-- <div class="ion"><i class="ion-ios-list-outline"></i></div> -->
+        <img src="/assets/tagsnooper-results.png" alt="">
+      </div>
+      <div class="col-md-4 col-sm-4 text-center">
+        <!-- <div class="ion"><i class="ion-bookmark"></i></div> -->
+        <img src="/assets/tagsnooper-dash.png" alt="">
+      </div>
+    </div>
+    <div class="steps row text-center">
+      <div class="col-md-4 col-sm-4 text-center">
+        1. SEARCH ANY HASHTAG OR SUBJECT
+      </div>
+      <div class="col-md-4 col-sm-4 text-center">
+        2. GET A LIST OF THE MOST RELEVANT HASHTAGS
+      </div>
+      <div class="col-md-4 col-sm-4 text-center">
+        3. SAVE YOUR SEARCHES AND ORGANIZE BY TOPICS
+      </div>
+    </div>
+  </div>
+</section>
+<!--Footer -->
+<footer class='navbar-bottom'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-2'>
+        <h4>TAGSNOOPER</h4>
+        <ul class='list-unstyled'>
+          <li><a href='/'>Home</a></li>
+          <li><a href='#team'>About</a></li>
+          <li><a href='#services'>Contact</a></li>
+        </ul>
+      </div>
+      <div class='col-xs-2 col-xs-offset-1'>
+        <h4>ACCOUNT</h4>
+        <ul class='list-unstyled'>
+          <li><a href='/login'>Log in</a></li>
+          <li><a href='/signup'>Register</a></li>
+        </ul>
+      </div>
+      <div class='col-md-2 col-md-offset-5 col-xs-3 col-xs-offset-4'>
+        <h4>GET IN TOUCH</h4>
+        <ul class='list-unstyled'>
+          <li><a href='/'>info@tagsnooper.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="text-center">
+        <ul class="icons">
+          <li><a href="https://www.twitter.com" class="twitter ion-social-twitter"></a></li>
+          <li><a href="https://www.facebook.com" class="facebook ion-social-facebook"></a></li>
+          <li><a href="https://www.instagram.com" class="instagram ion-social-instagram"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4 text-center">
+        <div class="copyright"><p>©2017 Tagsnooper. All Rights Reserved.<p></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+$(window).load(function() {
+   $('#loading').hide();
+});
+</script>
+<script type="text/javascript">
+// smooth scrolling to section function
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+      // Store hash
+      var hash = this.hash;
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
 
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-
-
-  </body>
-</html>
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>

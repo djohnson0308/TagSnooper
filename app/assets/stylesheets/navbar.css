@@ -1,0 +1,40 @@
+.navbar-default {
+  background-color: rgba(255, 255, 255, 1);
+  border-color: #d8dce6;
+}
+.navbar-default .navbar-nav>li {
+  color: #333447;
+  margin-top: 35px;
+  letter-spacing: .5px;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #333447;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: #4ca8cf;
+}
+.login-nav {
+  border: 1px solid #c3e2e5;
+  border-radius: 8px;
+  padding-top: 0px;
+  margin-left: 10px;
+}
+.signup-nav {
+  color: #4ca8cf !important;
+  border: 1px solid #4ca8cf;
+  border-radius: 8px;
+  padding-top: 0px;
+  margin-left: 25px;
+}
+.signup-nav>li {
+  color: #4ca8cf !important;
+}
+.current-user {
+  padding-top: 13px;
+  margin-right: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: oblique;
+}

@@ -1,31 +1,18 @@
-
 <%= render 'navbar' %>
-
-
-<!-- <section id="intro" class="intro-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="access">SIGN UP</h1>
-
-                <a class="btn btn-default page-scroll" href="#about">Click Here to Sign Up!</a> --> -->
-
-
-
-                </div>
-
-            </div>
-        </div>
+<section id="login">
+  <div class="container">
+    <div class="row">
+      <div class="login col-md-7 col-xs-7">
+      	<h2>SIGN UP</h2>
+        <p>Please fill out the required fields below.</p>
+          <%= form_for :user, url: '/users' do |f| %>
+          	<%= f.text_field :name, placeholder: "Name", :autofocus=>true %>
+            <%= f.text_field :email, placeholder: "Email"%>
+      			<%= f.password_field :password, placeholder: "Password" %>
+      			<%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+            <%= f.submit "SUBMIT", class: "submit btn btn-primary btn-block btn-large" %>
+          <% end %>
+      </div>
     </div>
-</section> -->
-
-<div class="login">
-	<h1>SIGN UP</h1>
-    <%= form_for :user, url: '/users' do |f| %>
-    	<%= f.text_field :name, placeholder: "Name", :autofocus=>true %>
-      <%= f.text_field :email, placeholder: "Email"%>
-			<%= f.password_field :password, placeholder: "Password" %>
-			<%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
-      <%= f.submit "SUBMIT", class: "btn btn-primary btn-block btn-large" %>
-    <% end %>
-</div>
+  </div>
+</section>

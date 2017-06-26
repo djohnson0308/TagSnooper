@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-lg-2">
+      <nav id="side-nav" class="navbar navbar-default navbar-fixed-side">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                  <a class="navbar-brand" href="/"><img src="<%= asset_path 'tagsnooper-logo.png' %>" alt=""></a>
+                </li>
+                <!-- <li>
+                  <?%= form_tag("/hashtags", method: "get") do %>
+                  <?%= text_field_tag (:hashtag_search), nil, placeholder: "Search", id: "hashtag_search", required: true, autofocus: true%>
+                  <?% end %>
+                </li> -->
+                <li>
+                    <a href="#">Create Topic</a>
+                </li>
+                <li>
+                    <a href="#">Delete Topic</a>
+                </li>
+                <li>
+                    <a href="#">Log out</a>
+                </li>
+            </ul>
+      </nav>
+    </div>
+    <div class="col-sm-9 col-lg-10">
+      <%= form_tag("/hashtags", method: "get") do %>
+      <%# label_tag(:q, "Snoop for:") %>
+      <%= text_field_tag (:hashtag_search), nil, placeholder: "Snoop for..", id: "hashtag_search", required: true, autofocus: true%>
+      <%= button_tag ("SNOOP"), class: "btn-success", data: {disable_with: "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i>"}%>
+      <% end %>
+
+
+      <% if defined?(@results) %>
+
+      <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
+        <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name'), class: 'topic_search' %>
+          <% @results.each do |user_hashtag, hashtag_count| %>
+          <div class="hashtags col-lg-12">
+            <div class="dropdownitem"><span style="color: #5899B9">#</span><%= user_hashtag.capitalize %>: <%= hashtag_count %>
+              <input type="checkbox" value="<%= user_hashtag %>" name="hashtag_values[]">
+            </div>
+          </div>
+          <% end %>
+          <!-- <input class="btn btn-success submit_button" type="submit" value="SAVE SNOOPS"><a href="/dashboard"></a></input> -->
+          <%= button_tag ("SAVE"), class: "btn-success" %>
+        <% end %>
+
+      <% end %>
+    </div>
+  </div>
+</div>

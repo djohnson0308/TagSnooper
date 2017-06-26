@@ -4,7 +4,7 @@ class HashtagController < ApplicationController
 
   def index
     if params[:hashtag_search]
-      @results = Hashtag.tweet_search(params[:hashtag_search]).take(15)
+      @results = Hashtag.tweet_search(params[:hashtag_search]).take(20)
     end
   end
 

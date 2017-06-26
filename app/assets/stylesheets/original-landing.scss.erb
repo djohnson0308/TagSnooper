@@ -111,6 +111,64 @@ h6 {
         width: 100%;
     }
 }
+.modal-content {
+  border-radius: 0px;
+}
+button.close {
+margin-top: 2px;
+margin-right: 10px;
+font-size: 35px;
+}
+#signup-modal {
+  height: 20em;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 0 50px 10px #757575;
+}
+#signup-modal-header h1 {
+  margin-top: 60px;
+}
+#signup-modal-header {
+  height: 15em;
+  background: linear-gradient(top left, rgba(10, 71, 102, 0.88) 40%, rgba(57, 128, 128, .6) 80%) repeat scroll 0 0, url(<%= asset_path 'tagsnooper-landing-3.jpeg' %>) no-repeat center center;
+  background-size: cover;
+}
+#login-modal {
+  height: 20em;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 0 50px 10px #757575;
+}
+#login-modal-header h1 {
+  margin-top: 60px;
+}
+#login-modal-header {
+  height: 15em;
+  background: linear-gradient(top left, rgba(10, 71, 102, 0.88) 40%, rgba(57, 128, 128, .6) 80%) repeat scroll 0 0, url(<%= asset_path 'tagsnooper-landing-3.jpeg' %>) no-repeat center center !important;
+  background-size: cover;
+}
+.required {
+  font-size: 12px !important;
+}
+.modal-footer {
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+.modal-footer .btn {
+  background-color: #0275d8;
+  border-color: #0275d8;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+.modal-footer .btn:hover {
+  background-color: #015197;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
 .hashtag {
   padding-top: 40%;
 }
@@ -150,12 +208,15 @@ h6 {
 .account {
   text-shadow: 0 1px 3px rgba(36,180,126,.4);
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  transition: .5s;
 }
 .account:hover {
-  transform: translateY(-1px);
+  transform: translateY(-4px);
   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  transition: .5s;
 }
 .account-button {
+  cursor: pointer;
   color: #fff;
   background-color: #3ecf8e;
   text-shadow: 0 1px 3px rgba(36,180,126,.4);
@@ -166,12 +227,15 @@ h6 {
   transition: all .15s ease;
 }
 .login-1 {
+  cursor: pointer;
   text-shadow: 0 1px 3px rgba(36,180,126,.4);
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  transition: .5s;
 }
 .login-1:hover{
-  transform: translateY(-1px);
+  transform: translateY(-4px);
   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  transition: .5s;
 }
 #how {
   margin-top: 0px;
@@ -196,7 +260,7 @@ h6 {
   margin-bottom: 50px;
 }
 #how .icons img {
-  height: 150px;
+  height: 170px;
   border-radius: 5px;
 }
 #how i {

@@ -17,7 +17,6 @@
         <% if defined?(@results) %>
 
         <%= form_tag hashtags_create_path, method: :post, class: "navbar-form navbar-left search-form" do %>
-        <%#= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name'), id: "topic_search" %>
           <%= select_tag 'topic', options_from_collection_for_select(current_user.topics, 'id', 'name'), class: 'topic_search' %>
             <% @results.each do |user_hashtag, hashtag_count| %>
             <div class="hashtags col-lg-12">

@@ -48,6 +48,7 @@
 <section id="intro-header" class="intro-header bg-img">
    <div class="container">
        <div class="row">
+
          <div class="intro-message col-md-8 text-left">
              <h3>Access to the Most Relevant Hashtags</h3>
              <div class="description col-md-8 text-left">
@@ -55,11 +56,70 @@
              </div>
              <div class="create-log col-md-8 text-left">
                <ul class="buttons">
-                 <li class="account"><a href="/signup" class="account-button">CREATE ACCOUNT</a></li>
-                 <li class="login-1"><a href="/login" class="login-button">LOG IN</a></li>
+                 <li class="account"><a data-toggle="modal" data-target=".signup-modal" class="account-button">CREATE ACCOUNT</a></li>
+                 <li class="login-1"><a data-toggle="modal" data-target=".login-modal" class="login-button">LOG IN</a></li>
                </ul>
              </div>
-         </div>
+            <!-- Sign Up Modal -->
+            <div class="modal fade signup-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" style="color:#fff;">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div id="signup-modal-header" class="modal-header text-center">
+                      <h1 class="modal-title" id="exampleModalLabel">Sign Up</h1>
+                  </div>
+                  <div class="modal-body">
+                    <div class="login-text">
+                      <p>Please fill out the required fields below.</p>
+                        <%= form_for :user, url: '/users' do |f| %>
+                          <%= f.text_field :name, placeholder: "* Name", autofocus: true, id: 'signup-field' %>
+                          <%= f.text_field :email, placeholder: "* Email"%>
+                          <%= f.password_field :password, placeholder: "* Password" %>
+                          <%= f.password_field :password_confirmation, placeholder: "* Password Confirmation" %>
+                          <p class="required">* required</p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <%= f.submit "SUBMIT", class: "submit btn btn-primary btn-block btn-large" %>
+                  <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.Sign Up Modal -->
+            <!-- Log In Modal -->
+            <div class="modal fade login-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" style="color:#fff;">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div id="signup-modal-header" class="modal-header text-center">
+                      <h1 class="modal-title" id="exampleModalLabel">Log In </h1>
+                  </div>
+                  <div class="modal-body">
+                    <div class="login-text">
+                      <p>Please fill out the required fields below.</p>
+                      <%= form_tag '/login' do %>
+                        <%= text_field_tag :email,"", placeholder: "* Email", :autofocus=>true, id: 'login-field' %>
+                        <%= password_field_tag :password, "", placeholder: "* Password" %>
+                      <p class="required">* required</p>
+                      <div class="text-center" style="cursor:pointer;">
+                        <a data-dismiss="modal" data-toggle="modal" data-target=".signup-modal">create an account</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <%= submit_tag "SUBMIT", class: "submit btn btn-primary btn-block btn-large" %>
+            	    	<% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /. Log In Modal -->
+
          <div class="col-md-4">
            <div class="hashtag hash col-md-offset-4 col-xs-offset-3 hash text-left">
              #travel
@@ -105,7 +165,7 @@
   </div>
 </section>
 <section id="how">
-  <div class="works container">
+  <div class="works container-fluid">
     <div class="col-lg-12 text-center">
         <h1>HOW IT WORKS</h1>
         <!-- <p>Hashtags allow photos to be seen by additional people not following you. Hashtags will produce the most likes and organic followers.</p> -->

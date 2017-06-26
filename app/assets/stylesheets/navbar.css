@@ -11,9 +11,15 @@
   color: #333447;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition-property: color;
+  transition-duration: .4s;
+  transition-timing-function: ease-out;
 }
 .navbar-default .navbar-nav>li>a:hover {
   color: #4ca8cf;
+  transition-property: color;
+  transition-duration: .4s;
+  transition-timing-function: ease-out;
 }
 .login-nav {
   border: 1px solid lightgrey;

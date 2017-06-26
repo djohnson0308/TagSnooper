@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :users, except: [:new]
   # post '/users' => 'users#create'
 
-  get '/dashboard' => 'dashboard#index'
+  get '/dashboard' => 'dashboard#index-2'
   get 'dashboard/settings' => 'dashboard#settings'
   get 'dashboard/hashtags' => 'dashboard#hashtags'
 
